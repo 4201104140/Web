@@ -1,0 +1,6 @@
+C:\Users\phant\OneDrive\Desktop\Web\WebTechnology\CN_Web\01.ConnectDB\ConnectDataBase\bin\Debug\ConnectDataBase.dll
+C:\Users\phant\OneDrive\Desktop\Web\WebTechnology\CN_Web\01.ConnectDB\ConnectDataBase\bin\Debug\ConnectDataBase.pdb
+C:\Users\phant\OneDrive\Desktop\Web\WebTechnology\CN_Web\01.ConnectDB\ConnectDataBase\obj\Debug\ConnectDataBase.csprojAssemblyReference.cache
+C:\Users\phant\OneDrive\Desktop\Web\WebTechnology\CN_Web\01.ConnectDB\ConnectDataBase\obj\Debug\ConnectDataBase.csproj.CoreCompileInputs.cache
+C:\Users\phant\OneDrive\Desktop\Web\WebTechnology\CN_Web\01.ConnectDB\ConnectDataBase\obj\Debug\ConnectDataBase.dll
+C:\Users\phant\OneDrive\Desktop\Web\WebTechnology\CN_Web\01.ConnectDB\ConnectDataBase\obj\Debug\ConnectDataBase.pdb
