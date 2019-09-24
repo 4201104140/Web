@@ -1,0 +1,11 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+
+@{
+    if (this.Session["userid"] != null)
+    {
+
+        <div>Hi @this.Session["userid"]</div>
+    }
+}

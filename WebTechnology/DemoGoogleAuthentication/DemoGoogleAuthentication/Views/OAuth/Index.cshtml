@@ -1,0 +1,43 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+}
+
+<div class="card">
+    <div class="g-signin2" data-onsuccess="onSignIn" data-theme="dark"></div>
+</div>
+
+
+<script type="text/javascript">
+
+    function onSignIn(googleUser) {
+        var profile = googleUser.getBasicProfile();
+        if (googleUser === false) {
+            googleUser.disconnect();
+        }
+        $.post(
+            '/OAuth/OAuth',
+            {
+                data: {
+                    data: {
+                        UserId: profile.getId(),
+                        UserName: profile.getName(),
+                        UserEmail: profile.getEmail(),
+                        UserImage: profile.getImageUrl(),
+                        UserToken: googleUser.getAuthResponse().id_token
+                    }
+                }
+            },
+            function (result) {
+                if (result.IsSuccess) {
+                    document.body.innerHTML = "Đang chuyển hướng, xin chờ trong giây lát!";
+                    window.location.href = '/Home/Index';
+                }
+                else {
+                    alert("Fail");
+                }
+            }
+        )
+    }
+</script>
+
