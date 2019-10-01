@@ -1,0 +1,29 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="google-signin-client_id" content="407576620147-2d11d7hvqc3fnudniv4q6hag23uftqk6.apps.googleusercontent.com">
+    <meta name="google-signin-client_secret" content="MdDxjTRkLug4t9a-97ijFgLL">
+    <meta name="google-signin-client_scope" content="email profile https://www.googleapis.com/auth/drive">
+    <title>@ViewBag.Title - My ASP.NET Application</title>
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet" type="text/css">
+</head>
+<body>
+
+    <div class="container" style="min-height:80vh;">
+        @RenderBody()
+
+    </div>
+
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+    @Scripts.Render("~/google")
+    <script src="https://apis.google.com/js/platform.js?onload=initClient" async defer></script>
+    @*<script src="https://apis.google.com/js/api:client.js"></script>*@
+
+    @RenderSection("scripts", required: false)
+</body>
+</html>

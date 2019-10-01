@@ -1,0 +1,73 @@
+﻿@{
+    ViewBag.Title = "Index";
+    var user = HttpContext.Current.Session["userCurrent"] as DemoGoogleAuthentication.Models.GoogleUser;
+
+}
+
+<div class="row" style="height:80vh;">
+    <div class="col-6 text-center border-right">
+        <div style="margin:20vh;">
+
+            @if (user != null)
+            {
+                <button class="btn btn-primary" style="margin-top:20px;" onclick="SignOut()">Sign Out</button>
+            }
+            else
+            {
+                <div id="g-signin2" class="g-signin2"></div>
+            }
+        </div>
+    </div>
+    @if (user != null)
+    {
+
+        <div class="col-6">
+            <div>
+                <h4>User</h4>
+                <hr />
+                <dl class="dl-horizontal">
+                    <dt>
+                        Mã
+                    </dt>
+
+                    <dd>
+                        @user.Id
+                    </dd>
+
+                    <dt>
+                        Email
+                    </dt>
+
+                    <dd>
+                        @user.Email
+                    </dd>
+
+                    <dt>
+                        Họ tên
+                    </dt>
+
+                    <dd>
+                        @user.Username
+                    </dd>
+
+                </dl>
+                <div style="margin-left:10px; display:inline-block;">
+                    <img src="@user.ImageUrl" height="75" width="75" />
+                </div>
+            </div>
+            <div class="clearfix"></div>
+
+            <h3>Quyền dùng Drive</h3>
+            <div>
+                <button type="button" class="btn btn-danger" onclick="getFolder()">Cấp quyền</button>
+            </div>
+            <hr />
+            <ul class="list-group-item-info" id="list-folder">
+                <li class="list-group-item">Folders</li>
+            </ul>
+        </div>
+    }
+
+</div>
+
+
