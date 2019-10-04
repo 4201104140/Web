@@ -1,6 +1,6 @@
 ﻿var auth2;
 var user = {};
-
+var googleUserr = {};
 var initClient = function () {
     gapi.load('auth2', function () {
 
@@ -14,11 +14,14 @@ var initClient = function () {
 
 function onSuccess(googleUser) {
     var profile = googleUser.getBasicProfile();
+    googleUserr = googleUser;
+    debugger;
     user.Id = profile.getId();
     user.Username = profile.getName();
     user.Email = profile.getEmail();
     user.AccessToken = "";
     user.ImageUrl = profile.getImageUrl();
+    token = auth2.currentUser.get().Zi.access_token;
     sendData(user);
     console.log('Logged in as: ' + googleUser.getBasicProfile().getName());
 }
@@ -49,51 +52,63 @@ function sendData(user) {
     );
 }
 var token;
-var result;
-function getFolder() {
+
+function grantScope() {
     var options = new gapi.auth2.SigninOptionsBuilder(
         {
             'scope': 'email https://www.googleapis.com/auth/drive https://www.googleapis.com/auth/drive.file https://www.googleapis.com/auth/drive.readonly https://www.googleapis.com/auth/drive.metadata.readonly https://www.googleapis.com/auth/drive.appdata https://www.googleapis.com/auth/drive.metadata https://www.googleapis.com/auth/drive.photos.readonly'
         });
-
-
-    googleUser = auth2.currentUser.get();
-    googleUser.grant(options).then(
+    googleUserr = auth2.currentUser.get();
+    googleUserr.grant(options).then(
         function (success) {
-
             token = success.Zi["access_token"];
-            var xhr = new XMLHttpRequest();
-            xhr.withCredentials = true;
-
-            xhr.addEventListener("readystatechange", function () {
-                if (this.readyState === 4) {
-                    result = this.responseText;
-                    showName();
-                }
-            });
-
-            xhr.open("GET", "https://www.googleapis.com/drive/v3/files?corpora=user&includeItemsFromAllDrives=true&q=mimeType%20%3D%20'application%2Fvnd.google-apps.folder'&supportsAllDrives=true");
-            xhr.setRequestHeader("content-type", "application/json");
-            xhr.setRequestHeader("authorization", "Bearer " + token);
-            xhr.setRequestHeader("cache-control", "no-cache");
-
-
-            xhr.send();
         },
         function (fail) {
             alert(JSON.stringify({ message: "fail", value: fail }));
-        });
+        }
+    )
 }
+
+function getFolder() {
+    var xhr = new XMLHttpRequest();
+    xhr.withCredentials = true;
+
+    xhr.open("GET", "https://www.googleapis.com/drive/v3/files?corpora=user&includeItemsFromAllDrives=true&q=mimeType%20%3D%20'application%2Fvnd.google-apps.folder'&supportsAllDrives=true");
+    xhr.setRequestHeader("content-type", "application/json");
+    xhr.setRequestHeader("authorization", "Bearer " + token);
+    xhr.setRequestHeader("cache-control", "no-cache");
+
+    xhr.send();
+    xhr.addEventListener("readystatechange", function () {
+        debugger;
+        if (this.readyState === 4) {
+            result = this.responseText;
+            showName(result);
+        }
+    });
+
+};
 function showName() {
     if (result != null) {
-        var data = JSON.parse(result)["files"];
-        var ul = document.getElementById("list-folder");
-        data.forEach(function (v) {
+        var data = JSON.parse(result);
+        if (data["error"]) {
+            alert("Bạn không có quyền này.")
+        }
+        else {
+            var data = JSON.parse(result)["files"];
+            var ul = document.getElementById("list-folder");
             var li = document.createElement("li");
             li.className = "list-group-item";
-            li.appendChild(document.createTextNode(v["name"]));
+            li.appendChild(document.createTextNode('Folders'));
             ul.appendChild(li);
-        })
+            data.forEach(function (v) {
+                li = document.createElement("li");
+                li.className = "list-group-item";
+                li.appendChild(document.createTextNode(v["name"]));
+                ul.appendChild(li);
+            })
+        }
+        
     }
 }
 
