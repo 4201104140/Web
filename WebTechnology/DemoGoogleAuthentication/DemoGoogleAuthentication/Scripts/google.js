@@ -1,6 +1,7 @@
 ﻿var auth2;
 var user = {};
 var googleUserr = {};
+var token;
 var initClient = function () {
     gapi.load('auth2', function () {
 
@@ -15,7 +16,6 @@ var initClient = function () {
 function onSuccess(googleUser) {
     var profile = googleUser.getBasicProfile();
     googleUserr = googleUser;
-    debugger;
     user.Id = profile.getId();
     user.Username = profile.getName();
     user.Email = profile.getEmail();
@@ -51,7 +51,7 @@ function sendData(user) {
         html => location.reload()
     );
 }
-var token;
+
 
 function grantScope() {
     var options = new gapi.auth2.SigninOptionsBuilder(
@@ -80,7 +80,6 @@ function getFolder() {
 
     xhr.send();
     xhr.addEventListener("readystatechange", function () {
-        debugger;
         if (this.readyState === 4) {
             result = this.responseText;
             showName(result);
@@ -112,7 +111,11 @@ function showName() {
     }
 }
 
-function SignOut() {
+function Disconnect() {
     auth2.disconnect();
+    location.href = "/Login/SignOut";
+}
+function SignOut() {
+    auth2.signOut();
     location.href = "/Login/SignOut";
 }
