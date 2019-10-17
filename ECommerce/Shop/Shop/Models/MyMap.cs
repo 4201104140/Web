@@ -1,4 +1,6 @@
 ﻿using AutoMapper;
+using Shop.DataModel;
+
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -12,6 +14,8 @@ namespace Shop.Models
         {
             CreateMap<HangHoa, HangHoaView>().ReverseMap();
             //CreateMap<HangHoa, Hang>
+            CreateMap<HangHoa, HangHoaChiTiet>();
+            //CreateMap<Category, CategoryView>();
         }
     }
 }

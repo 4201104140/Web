@@ -39,7 +39,9 @@
             @await Html.PartialAsync("_MyHeader")
         </header>
         <!-- end header -->
-        @await Html.PartialAsync("_HorizontalMenu")
+        @*@await Html.PartialAsync("_HorizontalMenu")*@
+        @await Component.InvokeAsync("HorizontalMenu")
+
 
         <!-- Breadcrumbs -->
         @RenderSection("Breadcrumbs", required: false)

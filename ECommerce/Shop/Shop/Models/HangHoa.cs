@@ -45,6 +45,6 @@ namespace Shop.Models
         [Display(Name = "Thương hiệu")]
         public ThuongHieu ThuongHieu { get; set; }
 
-        //public string TenHhSeoUrl => TenHh.ToUrlFriendly();
+        public string TenHhSeoUrl => TenHh.ToUrlFriendly();
     }
 }

@@ -4,6 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using AutoMapper;
 using Microsoft.AspNetCore.Mvc;
+using Shop.DataModel;
 using Shop.Helper;
 using Shop.Models;
 
@@ -42,18 +43,18 @@ namespace Shop.Controllers
             {
                 item.SoLuong += cart.SoLuong;
             }
-            else
-            {
-                HangHoa hh = ctx.HangHoas.SingleOrDefault(p => p.MaHh == cart.HangHoa.MaHh);
-                if (hh == null)
-                    return RedirectToAction("Error", "Home");
-                item = new CartItem
-                {
-                    HangHoa = mapper.Map<HangHoaView>(hh),
-                    SoLuong = cart.SoLuong
-                };
-                carts.Add(item);
-            }
+            //else
+            //{
+            //    HangHoa hh = ctx.HangHoas.SingleOrDefault(p => p.MaHh == cart.HangHoa.MaHh);
+            //    if (hh == null)
+            //        return RedirectToAction("Error", "Home");
+            //    item = new CartItem
+            //    {
+            //        HangHoa = mapper.Map<HangHoaView>(hh),
+            //        SoLuong = cart.SoLuong
+            //    };
+            //    carts.Add(item);
+            //}
             HttpContext.Session.SetObject("Cart", carts);
             //List<CartItem> aa = HttpContext.Session.GetObject<List<CartItem>>("Cart");
             return RedirectToAction("Index","Home");

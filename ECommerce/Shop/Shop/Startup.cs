@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Threading.Tasks;
 using AutoMapper;
@@ -8,9 +9,11 @@ using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.HttpsPolicy;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Rewrite;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
+using Shop.DataModel;
 using Shop.Models;
 
 namespace Shop
@@ -61,6 +64,15 @@ namespace Shop
                 app.UseHsts();
             }
 
+            using (StreamReader iisUrlRewriteStreamReader = File.OpenText("IISUrlRewrite.xml"))
+            {
+                var options = new RewriteOptions()
+                    //.AddRedirect("redirect-rule/(.*)", "Home/Privacy")
+                    //.AddRewrite(@"rewrite-rule/(\d+)/(\d+)", "Home/Privacy?id=$1&ti=$2", skipRemainingRules: true)
+                    .AddIISUrlRewrite(iisUrlRewriteStreamReader);
+                app.UseRewriter(options);
+            }
+
             app.UseHttpsRedirection();
             app.UseStaticFiles();
             app.UseCookiePolicy();
@@ -68,6 +80,10 @@ namespace Shop
 
             app.UseMvc(routes =>
             {
+                //var options = new RewriteOptions()
+                //    //.AddRedirect("redirect-rule/(.*)", "Home/Privacy")
+                //    .AddRewrite(@"rewrite-rule/(\d+)/(\d+)", "Home/Privacy?id=$1&ti=$2", skipRemainingRules: true);
+                //app.UseRewriter(options);
                 routes.MapRoute(
                     name: "default",
                     template: "{controller=Home}/{action=Index}/{id?}");

@@ -1,0 +1,185 @@
+﻿@model IEnumerable<Shop.DataModel.Category>
+<nav>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-3 col-sm-3 mega-container hidden-xs">
+                <div class="navleft-container">
+                    <div class="mega-menu-title">
+                        <h3><span>All Categories</span></h3>
+                    </div>
+
+                    <!-- Shop by category -->
+                    <div class="mega-menu-category">
+                        <ul class="nav">
+                            @foreach (var item in Model)
+                            {
+                                @if (item.CategoryParent == null)
+                                {
+                                    <li>
+                                        <a href="#">@item.CategoryName</a>
+                                        <div class="wrap-popup column1">
+                                            <div class="popup">
+                                                <ul class="nav">
+                                                    @foreach (var it in item.Categories)
+                                                    {
+                                                        <li><a href="/@it.CategoryName.ToUrlFriendly()"><span>@it.CategoryName</span></a></li>
+                                                    }
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </li>
+                                }
+                            }
+                            @*<li class="nosub"><a href="#">Games &amp; Video</a></li>*@
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-9 col-sm-9 jtv-megamenu">
+                <div class="mtmegamenu">
+                    <ul class="hidden-xs">
+                        <li class="mt-root demo_custom_link_cms">
+                            <div class="mt-root-item">
+                                <a asp-action="Index" asp-controller="Home">
+                                    <div class="title title_font"><span class="title-text">Trang chủ</span></div>
+                                </a>
+                            </div>
+                        </li>
+                        <li class="mt-root">
+                            <div class="mt-root-item">
+                                <a href="/HangHoa">
+                                    <div class="title title_font"><span class="title-text">Sản phẩm</span></div>
+                                </a>
+                            </div>
+                            @*@await Component.InvokeAsync("MenuLoai")*@
+
+                        </li>
+                        <li class="mt-root">
+                            <div class="mt-root-item">
+                                <a href="shop_grid.html">
+                                    <div class="title title_font"><span class="title-text">Mới ra mắt</span> </div>
+                                </a>
+                            </div>
+                        </li>
+
+                        <li class="mt-root">
+                            <div class="mt-root-item">
+                                <div class="title title_font"><span class="title-text">Bán chạy</span></div>
+                            </div>
+                            <ul class="menu-items col-xs-12">
+                                <li class="menu-item depth-1 product menucol-1-3 withimage">
+                                    <div class="product-item">
+                                        <div class="item-inner">
+                                            <div class="product-thumbnail">
+                                                <div class="icon-sale-label sale-left">Sale</div>
+                                                <div class="pr-img-area">
+                                                    <a title="Product title here" href="single_product.html">
+                                                        <figure> <img class="first-img" src="~/images/products/product-1.jpg" alt="html theme"> <img class="hover-img" src="~/images/products/product-1.jpg" alt="html Template"></figure>
+                                                    </a>
+                                                </div>
+                                                <div class="pr-info-area">
+                                                    <div class="pr-button">
+                                                        <div class="mt-button add_to_wishlist"> <a href="wishlist.html"> <i class="fa fa-heart"></i> </a> </div>
+                                                        <div class="mt-button add_to_compare"> <a href="compare.html"> <i class="fa fa-signal"></i> </a> </div>
+                                                        <div class="mt-button quick-view"> <a href="quick_view.html"> <i class="fa fa-search"></i> </a> </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="item-info">
+                                                <div class="info-inner">
+                                                    <div class="item-title"> <a title="Product title here" href="single_product.html">Product title here </a> </div>
+                                                    <div class="item-content">
+                                                        <div class="rating"> <i class="fa fa-star-o"></i> <i class="fa fa-star-o"></i> <i class="fa fa-star-o"></i> <i class="fa fa-star-o"></i> <i class="fa fa-star-o"></i> </div>
+                                                        <div class="item-price">
+                                                            <div class="price-box"> <span class="regular-price"> <span class="price">$125.00</span> </span> </div>
+                                                        </div>
+                                                        <div class="pro-action">
+                                                            <button type="button" class="add-to-cart"><span> Add to Cart</span> </button>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="menu-item depth-1 product menucol-1-3 withimage">
+                                    <div class="product-item">
+                                        <div class="item-inner">
+                                            <div class="product-thumbnail">
+                                                <div class="icon-sale-label sale-left">Sale</div>
+                                                <div class="pr-img-area">
+                                                    <a title="Product title here" href="single_product.html">
+                                                        <figure> <img class="first-img" src="~/images/products/product-1.jpg" alt="html Template"> <img class="hover-img" src="~/images/products/product-1.jpg" alt="html Template"></figure>
+                                                    </a>
+                                                </div>
+                                                <div class="pr-info-area">
+                                                    <div class="pr-button">
+                                                        <div class="mt-button add_to_wishlist"> <a href="wishlist.html"> <i class="fa fa-heart"></i> </a> </div>
+                                                        <div class="mt-button add_to_compare"> <a href="compare.html"> <i class="fa fa-signal"></i> </a> </div>
+                                                        <div class="mt-button quick-view"> <a href="quick_view.html"> <i class="fa fa-search"></i> </a> </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="item-info">
+                                                <div class="info-inner">
+                                                    <div class="item-title"> <a title="Product title here" href="single_product.html">Product title here </a> </div>
+                                                    <div class="item-content">
+                                                        <div class="rating"> <i class="fa fa-star-o"></i> <i class="fa fa-star-o"></i> <i class="fa fa-star-o"></i> <i class="fa fa-star-o"></i> <i class="fa fa-star-o"></i> </div>
+                                                        <div class="item-price">
+                                                            <div class="price-box"> <span class="regular-price"> <span class="price">$125.00</span> </span> </div>
+                                                        </div>
+                                                        <div class="pro-action">
+                                                            <button type="button" class="add-to-cart"><span> Add to Cart</span> </button>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="menu-item depth-1 product menucol-1-3 withimage">
+                                    <div class="product-item">
+                                        <div class="item-inner">
+                                            <div class="icon-sale-label sale-left">Sale</div>
+                                            <div class="icon-new-label new-right">New</div>
+                                            <div class="product-thumbnail">
+                                                <div class="icon-sale-label sale-left">Sale</div>
+                                                <div class="pr-img-area">
+                                                    <a title="Product title here" href="single_product.html">
+                                                        <figure> <img class="first-img" src="~/images/products/product-1.jpg" alt="html Template"> <img class="hover-img" src="~/images/products/product-1.jpg" alt="html Template"></figure>
+                                                    </a>
+                                                </div>
+                                                <div class="pr-info-area">
+                                                    <div class="pr-button">
+                                                        <div class="mt-button add_to_wishlist"> <a href="wishlist.html"> <i class="fa fa-heart"></i> </a> </div>
+                                                        <div class="mt-button add_to_compare"> <a href="compare.html"> <i class="fa fa-signal"></i> </a> </div>
+                                                        <div class="mt-button quick-view"> <a href="quick_view.html"> <i class="fa fa-search"></i> </a> </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="item-info">
+                                                <div class="info-inner">
+                                                    <div class="item-title"> <a title="Product title here" href="single_product.html">Product title here </a> </div>
+                                                    <div class="item-content">
+                                                        <div class="rating"> <i class="fa fa-star-o"></i> <i class="fa fa-star-o"></i> <i class="fa fa-star-o"></i> <i class="fa fa-star-o"></i> <i class="fa fa-star-o"></i> </div>
+                                                        <div class="item-price">
+                                                            <div class="price-box"> <span class="regular-price"> <span class="price">$125.00</span> </span> </div>
+                                                        </div>
+                                                        <div class="pro-action">
+                                                            <button type="button" class="add-to-cart"><span> Add to Cart</span> </button>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                            </ul>
+                        </li>
+                        <li></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</nav>

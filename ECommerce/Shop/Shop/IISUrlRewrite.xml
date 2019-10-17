@@ -1,0 +1,20 @@
+<rewrite>
+  <rules>
+    <!--<rule name="Rewrite segment to id querystring" stopProcessing="true">
+      <match url="taii/(\d+)/(\d+)$" />
+      <action type="Rewrite" url="Home/Privacy?id={R:1}" appendQueryString="false"/>
+    </rule>-->
+    <rule name="Rewrite segment to id querystring" stopProcessing="true">
+      <match url="tai/(\d+)/(\d+)$" />
+      <action type="Rewrite" url="Home/Privacy?id={R:1}" appendQueryString="false"/>
+    </rule>
+    <rule name="Rewrite segment to id querystring" stopProcessing="true">
+      <match url="taii/(\d+)/(\d+)$" />
+      <action type="Rewrite" url="Home/Privacy?id={R:2}&amp;ti={R:1}" appendQueryString="false"/>
+    </rule>
+    <!--<rule name="Rewrite segment to id querystring" stopProcessing="true">
+      <match url="([^?]*)\?chi-tiet$" />
+      <action type="Rewrite" url="Product/Detail?name={R:1}" appendQueryString="false"/>
+    </rule>-->
+  </rules>
+</rewrite>

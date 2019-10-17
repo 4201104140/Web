@@ -24,6 +24,6 @@ namespace Shop.Models
         [Display(Name = "Giảm giá (%)")]
         public int GiamGia { get; set; }
         public double GiaBan => DonGia * (1 - GiamGia / 100.0);
-        //public string TenHhSeoUrl => TenHh.ToUrlFriendly();
+        public string TenHhSeoUrl => TenHh.ToUrlFriendly();
     }
 }
