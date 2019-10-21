@@ -18,6 +18,7 @@ namespace Tai.Models
             str = Regex.Replace(str, @"[iíìỉĩị]", "i");
             str = Regex.Replace(str, @"[oóòỏõọôốồổỗộơớờởỡợ]", "o");
             str = Regex.Replace(str, @"[uúùủũụưứừửữự]", "u");
+            str = Regex.Replace(str, @"[^a-z0-9\s-]", "");
             str = Regex.Replace(str, @"\s+", "-").Trim();
             str = Regex.Replace(str, @"\s", "-");
 

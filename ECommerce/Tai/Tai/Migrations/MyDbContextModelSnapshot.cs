@@ -57,6 +57,8 @@ namespace Tai.Migrations
 
                     b.Property<string>("ProductDescription");
 
+                    b.Property<string>("ProductDetail");
+
                     b.Property<string>("ProductName")
                         .IsRequired()
                         .HasMaxLength(250);

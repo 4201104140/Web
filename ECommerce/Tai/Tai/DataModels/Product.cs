@@ -19,6 +19,7 @@ namespace Tai.DataModels
         [MaxLength(100)]
         public string Images { get; set; }
         public string ProductDescription { get; set; }
+        public string ProductDetail { get; set; }
         public int ProductQuantity { get; set; }
         public double ProductPrice { get; set; }
         [Range(0, 100)]

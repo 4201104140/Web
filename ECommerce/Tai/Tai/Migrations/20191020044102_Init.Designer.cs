@@ -9,7 +9,7 @@ using Tai.DataModels;
 namespace Tai.Migrations
 {
     [DbContext(typeof(MyDbContext))]
-    [Migration("20191017142834_Init")]
+    [Migration("20191020044102_Init")]
     partial class Init
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -58,6 +58,8 @@ namespace Tai.Migrations
                         .HasMaxLength(100);
 
                     b.Property<string>("ProductDescription");
+
+                    b.Property<string>("ProductDetail");
 
                     b.Property<string>("ProductName")
                         .IsRequired()

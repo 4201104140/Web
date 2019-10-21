@@ -35,6 +35,7 @@ namespace Tai.Migrations
                     ProductName = table.Column<string>(maxLength: 250, nullable: false),
                     Images = table.Column<string>(maxLength: 100, nullable: true),
                     ProductDescription = table.Column<string>(nullable: true),
+                    ProductDetail = table.Column<string>(nullable: true),
                     ProductQuantity = table.Column<int>(nullable: false),
                     ProductPrice = table.Column<double>(nullable: false),
                     SaleOff = table.Column<double>(nullable: false),

@@ -65,3 +65,6 @@ C:\Users\phant\OneDrive\Desktop\Web\ECommerce\Tai\Tai\obj\Release\netcoreapp2.2\
 C:\Users\phant\OneDrive\Desktop\Web\ECommerce\Tai\Tai\obj\Release\netcoreapp2.2\Tai.pdb
 C:\Users\phant\OneDrive\Desktop\Web\ECommerce\Tai\Tai\obj\Release\netcoreapp2.2\Tai.csproj.CopyComplete
 C:\Users\phant\OneDrive\Desktop\Web\ECommerce\Tai\Tai\obj\Release\netcoreapp2.2\Razor\Views\Shared\Components\HorizontalMenu\Default.cshtml.g.cs
+C:\Users\phant\OneDrive\Desktop\Web\ECommerce\Tai\Tai\obj\Release\netcoreapp2.2\Razor\Views\Product\Index.cshtml.g.cs
+C:\Users\phant\OneDrive\Desktop\Web\ECommerce\Tai\Tai\obj\Release\netcoreapp2.2\Razor\Views\Shared\Components\Item\Default.cshtml.g.cs
+C:\Users\phant\OneDrive\Desktop\Web\ECommerce\Tai\Tai\obj\Release\netcoreapp2.2\Razor\Views\Product\Detail.cshtml.g.cs
