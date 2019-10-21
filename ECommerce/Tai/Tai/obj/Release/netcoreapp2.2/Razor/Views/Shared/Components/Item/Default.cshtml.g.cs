@@ -23,8 +23,13 @@ using Tai.Models;
 
 #line default
 #line hidden
+#line 3 "C:\Users\phant\OneDrive\Desktop\Web\ECommerce\Tai\Tai\Views\_ViewImports.cshtml"
+using Tai.Models.CartModels;
+
+#line default
+#line hidden
     [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"7161f257ddf5331f4b34915c58c079cf9bab6978", @"/Views/Shared/Components/Item/Default.cshtml")]
-    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"6855fe53b6bd37952cedc930ca94e73d16c3e3c3", @"/Views/_ViewImports.cshtml")]
+    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"5f9b7745c2e643501d3439bff4cb481f55e89933", @"/Views/_ViewImports.cshtml")]
     public class Views_Shared_Components_Item_Default : global::Microsoft.AspNetCore.Mvc.Razor.RazorPage<Tai.Models.ProductModels.ProductView>
     {
         private static readonly global::Microsoft.AspNetCore.Razor.TagHelpers.TagHelperAttribute __tagHelperAttribute_0 = new global::Microsoft.AspNetCore.Razor.TagHelpers.TagHelperAttribute("class", new global::Microsoft.AspNetCore.Html.HtmlString("first-img"), global::Microsoft.AspNetCore.Razor.TagHelpers.HtmlAttributeValueStyle.DoubleQuotes);
@@ -83,7 +88,7 @@ WriteAttributeValue("", 415, Model.ProductName.ToUrlFriendly(), 415, 34, false);
             WriteLiteral(">\r\n                            <figure> ");
             EndContext();
             BeginContext(490, 83, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("img", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagOnly, "7161f257ddf5331f4b34915c58c079cf9bab69785981", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("img", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagOnly, "7161f257ddf5331f4b34915c58c079cf9bab69786133", async() => {
             }
             );
             __Microsoft_AspNetCore_Mvc_Razor_TagHelpers_UrlResolutionTagHelper = CreateTagHelper<global::Microsoft.AspNetCore.Mvc.Razor.TagHelpers.UrlResolutionTagHelper>();
@@ -116,7 +121,7 @@ AddHtmlAttributeValue("", 553, Model.ProductName, 553, 18, false);
             WriteLiteral(" ");
             EndContext();
             BeginContext(574, 83, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("img", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagOnly, "7161f257ddf5331f4b34915c58c079cf9bab69788107", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("img", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagOnly, "7161f257ddf5331f4b34915c58c079cf9bab69788259", async() => {
             }
             );
             __Microsoft_AspNetCore_Mvc_Razor_TagHelpers_UrlResolutionTagHelper = CreateTagHelper<global::Microsoft.AspNetCore.Mvc.Razor.TagHelpers.UrlResolutionTagHelper>();
@@ -163,7 +168,7 @@ AddHtmlAttributeValue("", 637, Model.ProductName, 637, 18, false);
                             ");
             EndContext();
             BeginContext(1471, 131, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "7161f257ddf5331f4b34915c58c079cf9bab697811079", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "7161f257ddf5331f4b34915c58c079cf9bab697811231", async() => {
                 BeginContext(1580, 17, false);
 #line 24 "C:\Users\phant\OneDrive\Desktop\Web\ECommerce\Tai\Tai\Views\Shared\Components\Item\Default.cshtml"
                                                                                                                                    Write(Model.ProductName);

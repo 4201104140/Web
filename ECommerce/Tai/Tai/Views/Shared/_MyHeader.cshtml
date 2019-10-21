@@ -2,10 +2,17 @@
     Partial View: hiển thị phần đầu trang
     _MyHeader.cshtml
 *@
-@*@{ 
+@{ 
     List<CartItem> cartItems = Context.Session.GetObject<List<CartItem>>("Cart");
-    double sum = 0;
-}*@
+    var count = 0;
+    var sumPrice = 0.0;
+    if (cartItems.Count != 0)
+    {
+        count = cartItems.Count;
+        sumPrice = cartItems.Sum(item => item.Price);
+    }
+
+}
 <div class="header-container">
     <div class="header-top">
         <div class="container">
@@ -91,36 +98,36 @@
                         <div class="mini-cart">
                             <div data-toggle="dropdown" data-hover="dropdown" class="basket dropdown-toggle">
                                 <a href="/Cart">
-                                    <div class="cart-icon"><i class="icon-basket-loaded icons"></i><span class="cart-total">3</span></div>
+                                    <div class="cart-icon"><i class="icon-basket-loaded icons"></i><span class="cart-total">@count</span></div>
                                     <div class="shoppingcart-inner hidden-xs"><span class="cart-title">Giỏ hàng</span> </div>
                                 </a>
                             </div>
                             <div>
-                                @*<div class="top-cart-content">
+                                <div class="top-cart-content">
                                     <div class="block-subtitle hidden">Recently added items</div>
                                     <ul id="cart-sidebar" class="mini-products-list">
                                         @if (cartItems != null)
                                         {
-                                            @foreach (var hh in cartItems.ToList())
+                                            @foreach (var product in cartItems.ToList())
                                             {
-                                                 @(sum += hh.ThanhTien);
+
                                                 <li class="item odd">
-                                                    <a href="shopping_cart.html" title="Product title here" class="product-image"><img src="~/Hinh/HangHoa/@hh.HangHoa.Hinh" alt="html Template" width="65"></a>
+                                                    <a href="shopping_cart.html" title="Product title here" class="product-image"><img src="~/Hinh/HangHoa/@product.Product.Images" alt="html Template" width="65"></a>
                                                     <div class="product-details">
                                                         <a href="#" title="Remove This Item" class="remove-cart"><i class="pe-7s-trash"></i></a>
                                                         <p class="product-name"><a href="shopping_cart.html">Lorem ipsum dolor sit amet Consectetur</a> </p>
-                                                        <strong>@hh.SoLuong</strong> x <span class="price">@hh.HangHoa.GiaBan</span>
+                                                        <strong>@product.Quantity</strong> x <span class="price">@product.Product.Price</span>
                                                     </div>
                                                 </li>
                                             }
                                         }
                                     </ul>
-                                    <div class="top-subtotal">Subtotal: <span class="price">@sum</span></div>
+                                    <div class="top-subtotal">Subtotal: <span class="price">@sumPrice</span></div>
                                     <div class="actions">
                                         <button class="btn-checkout" type="button" onClick="location.href='checkout.html'"><i class="fa fa-check"></i><span>Checkout</span></button>
                                         <button class="view-cart" type="button" onClick="location.href='shopping_cart.html'"><i class="fa fa-shopping-cart"></i><span>View Cart</span></button>
                                     </div>
-                                </div>*@
+                                </div>
                             </div>
                         </div>
                     </div>

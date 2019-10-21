@@ -5,6 +5,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Tai.Models;
+using Tai.Models.CartModels;
 
 namespace Tai.Controllers
 {
@@ -12,6 +13,12 @@ namespace Tai.Controllers
     {
         public IActionResult Index()
         {
+            var aa = HttpContext.Session.GetObject<List<CartItem>>("Cart");
+            if (aa == null)
+            {
+                List<CartItem> cartItem = new List<CartItem>();
+                HttpContext.Session.SetObject("Cart", cartItem);
+            }
             return View();
         }
 

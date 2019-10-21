@@ -23,8 +23,13 @@ using Tai.Models;
 
 #line default
 #line hidden
+#line 3 "C:\Users\phant\OneDrive\Desktop\Web\ECommerce\Tai\Tai\Views\_ViewImports.cshtml"
+using Tai.Models.CartModels;
+
+#line default
+#line hidden
     [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"6ac3c67344bc5cdfd60e132da495d4d6d11e033b", @"/Views/Product/Detail.cshtml")]
-    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"6855fe53b6bd37952cedc930ca94e73d16c3e3c3", @"/Views/_ViewImports.cshtml")]
+    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"5f9b7745c2e643501d3439bff4cb481f55e89933", @"/Views/_ViewImports.cshtml")]
     public class Views_Product_Detail : global::Microsoft.AspNetCore.Mvc.Razor.RazorPage<Tai.Models.ProductModels.ProductDetail>
     {
         private static readonly global::Microsoft.AspNetCore.Razor.TagHelpers.TagHelperAttribute __tagHelperAttribute_0 = new global::Microsoft.AspNetCore.Razor.TagHelpers.TagHelperAttribute("class", new global::Microsoft.AspNetCore.Html.HtmlString("zoom-img"), global::Microsoft.AspNetCore.Razor.TagHelpers.HtmlAttributeValueStyle.DoubleQuotes);
@@ -144,12 +149,12 @@ WriteAttributeValue("", 517, Model.Images, 517, 13, false);
             WriteLiteral("                        <div class=\"large-image\"> ");
             EndContext();
             BeginContext(1068, 194, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "6ac3c67344bc5cdfd60e132da495d4d6d11e033b10689", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "6ac3c67344bc5cdfd60e132da495d4d6d11e033b10841", async() => {
                 BeginContext(1184, 1, true);
                 WriteLiteral(" ");
                 EndContext();
                 BeginContext(1185, 72, false);
-                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("img", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagOnly, "6ac3c67344bc5cdfd60e132da495d4d6d11e033b11067", async() => {
+                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("img", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagOnly, "6ac3c67344bc5cdfd60e132da495d4d6d11e033b11219", async() => {
                 }
                 );
                 __Microsoft_AspNetCore_Mvc_Razor_TagHelpers_UrlResolutionTagHelper = CreateTagHelper<global::Microsoft.AspNetCore.Mvc.Razor.TagHelpers.UrlResolutionTagHelper>();
@@ -309,7 +314,7 @@ AddHtmlAttributeValue("", 1092, Model.Images, 1092, 13, false);
                             ");
             EndContext();
             BeginContext(5808, 1316, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("form", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "6ac3c67344bc5cdfd60e132da495d4d6d11e033b20051", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("form", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "6ac3c67344bc5cdfd60e132da495d4d6d11e033b20203", async() => {
                 BeginContext(5912, 586, true);
                 WriteLiteral(@"
                                 <div class=""cart-plus-minus"">
@@ -509,7 +514,7 @@ AddHtmlAttributeValue("", 1092, Model.Images, 1092, 13, false);
                                                 ");
             EndContext();
             BeginContext(17211, 4982, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("form", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "6ac3c67344bc5cdfd60e132da495d4d6d11e033b35578", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("form", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "6ac3c67344bc5cdfd60e132da495d4d6d11e033b35730", async() => {
                 BeginContext(17217, 4969, true);
                 WriteLiteral(@"
                                                     <h3>You're reviewing: <span>Donec Ac Tempus</span></h3>
@@ -600,7 +605,7 @@ AddHtmlAttributeValue("", 1092, Model.Images, 1092, 13, false);
                                                 ");
             EndContext();
             BeginContext(22613, 906, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("form", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "6ac3c67344bc5cdfd60e132da495d4d6d11e033b42625", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("form", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "6ac3c67344bc5cdfd60e132da495d4d6d11e033b42777", async() => {
                 BeginContext(22659, 853, true);
                 WriteLiteral(@"
                                                     <div class=""form-add-tags"">
