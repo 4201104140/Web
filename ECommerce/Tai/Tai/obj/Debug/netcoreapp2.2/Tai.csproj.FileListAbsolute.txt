@@ -70,3 +70,5 @@ C:\Users\phant\OneDrive\Desktop\Web\ECommerce\Tai\Tai\obj\Debug\netcoreapp2.2\Ra
 C:\Users\phant\OneDrive\Desktop\Web\ECommerce\Tai\Tai\obj\Debug\netcoreapp2.2\Razor\Views\Product\Index.cshtml.g.cs
 C:\Users\phant\OneDrive\Desktop\Web\ECommerce\Tai\Tai\obj\Debug\netcoreapp2.2\Razor\Views\Shared\Components\Item\Default.cshtml.g.cs
 C:\Users\phant\OneDrive\Desktop\Web\ECommerce\Tai\Tai\obj\Debug\netcoreapp2.2\Razor\Views\Product\Detail.cshtml.g.cs
+C:\Users\phant\OneDrive\Desktop\Web\ECommerce\Tai\Tai\obj\Debug\netcoreapp2.2\Razor\Views\PayPal\Fail.cshtml.g.cs
+C:\Users\phant\OneDrive\Desktop\Web\ECommerce\Tai\Tai\obj\Debug\netcoreapp2.2\Razor\Views\PayPal\Success.cshtml.g.cs

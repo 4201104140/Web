@@ -115,7 +115,7 @@
                                                     <a href="shopping_cart.html" title="Product title here" class="product-image"><img src="~/Hinh/HangHoa/@product.Product.Images" alt="html Template" width="65"></a>
                                                     <div class="product-details">
                                                         <a href="#" title="Remove This Item" class="remove-cart"><i class="pe-7s-trash"></i></a>
-                                                        <p class="product-name"><a href="shopping_cart.html">Lorem ipsum dolor sit amet Consectetur</a> </p>
+                                                        <p class="product-name"><a href="shopping_cart.html">@product.Product.ProductName</a> </p>
                                                         <strong>@product.Quantity</strong> x <span class="price">@product.Product.Price</span>
                                                     </div>
                                                 </li>
@@ -124,7 +124,7 @@
                                     </ul>
                                     <div class="top-subtotal">Subtotal: <span class="price">@sumPrice</span></div>
                                     <div class="actions">
-                                        <button class="btn-checkout" type="button" onClick="location.href='checkout.html'"><i class="fa fa-check"></i><span>Checkout</span></button>
+                                        <button class="btn-checkout" type="button" onClick="location.href='/thanh-toan/paypal'"><i class="fa fa-check"></i><span>Checkout</span></button>
                                         <button class="view-cart" type="button" onClick="location.href='shopping_cart.html'"><i class="fa fa-shopping-cart"></i><span>View Cart</span></button>
                                     </div>
                                 </div>

@@ -1,5 +1,5 @@
 ﻿using BraintreeHttp;
-using PayPal.Core;
+using PayPalCheckoutSdk.Core;
 using System;
 using System.Collections.Generic;
 using System.IO;
@@ -16,12 +16,25 @@ namespace Tai.Models.CaptureIntent
         {
             return new SandboxEnvironment(
                  "AU197baVlXQbmrQ7G7mkjPyFa1XFm983K4mOZCm-BGskv5E_kjhjIBbcWTRCPqGyUJRCgY_x_DD3H6YX",
-                "ECaYk6w0kJASKQWfSUcEmWf1TzseAmb2_Zjv_8V7tkg477I9ZXT276VxCHWevYbAM0Z1QOaU4AxLTDS2");
+                 "ECaYk6w0kJASKQWfSUcEmWf1TzseAmb2_Zjv_8V7tkg477I9ZXT276VxCHWevYbAM0Z1QOaU4AxLTDS2");
         }
+
+        /**
+            Returns PayPalHttpClient instance which can be used to invoke PayPal API's.
+         */
         public static HttpClient client()
         {
             return new PayPalHttpClient(environment());
         }
+
+        public static HttpClient client(string refreshToken)
+        {
+            return new PayPalHttpClient(environment(), refreshToken);
+        }
+
+        /**
+            This method can be used to Serialize Object to JSON string.
+        */
         public static String ObjectToJSONString(Object serializableObject)
         {
             MemoryStream memoryStream = new MemoryStream();

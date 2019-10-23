@@ -7,15 +7,14 @@ using System.Threading.Tasks;
 
 namespace Tai.Models.CaptureIntent
 {
-    public class AuthorizeOrder
+    public class AuthorizeOrderPayPal
     {
-        public async static Task<HttpResponse> AuthorizeOrders(string OrderId)
+        public async static Task<HttpResponse> AuthorizeOrder(string OrderId)
         {
             var request = new OrdersAuthorizeRequest(OrderId);
             request.Prefer("return=representation");
             request.RequestBody(new AuthorizeRequest());
             var response = await PayPalClient.client().Execute(request);
-
             return response;
         }
     }
