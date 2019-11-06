@@ -1,0 +1,5 @@
+﻿$(document).ready(function () {
+    $('.ui.menu .ui.dropdown').dropdown({
+        on: 'hover'
+    });
+});

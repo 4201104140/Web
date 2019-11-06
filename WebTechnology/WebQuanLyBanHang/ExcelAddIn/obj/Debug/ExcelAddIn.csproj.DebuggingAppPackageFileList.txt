@@ -1,0 +1,2 @@
+bin\Debug\OfficeAppManifests\ExcelAddInManifest.xml
+C:\Users\Hello\Desktop\Web\WebTechnology\WebQuanLyBanHang\ExcelAddIn\bin\Debug\ExcelAddIn.debugapp
