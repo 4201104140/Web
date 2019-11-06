@@ -1,0 +1,59 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Test</title>
+    <script src="https://apis.google.com/js/platform.js?onload=start" async defer></script>
+    @*<script src="~/Scripts/test.js"></script>*@
+    @Scripts.Render("~/bundles/jquery")
+</head>
+<body>
+    <button id="signinButton">Sign in with Google</button>
+    <script>
+        var auth2;
+        var rs;
+        function start() {
+            gapi.load('auth2', function () {
+                auth2 = gapi.auth2.init({
+                    client_id: '407576620147-2d11d7hvqc3fnudniv4q6hag23uftqk6.apps.googleusercontent.com'
+
+                });
+            });
+        };
+
+        $('#signinButton').click(function () {
+            auth2.grantOfflineAccess().then(signInCallback);
+        })
+        function signInCallback(authResult) {
+            if (authResult['code']) {
+                $('#signinButton').attr('style', 'display: none');
+                rs = authResult['code'];
+                var data = { "code": rs }
+                $.ajax({
+                    type: 'POST',
+                    url: 'https://localhost:44367/Home/Offline',
+
+                    headers: {
+                        'X-Requested-With': 'XMLHttpRequest'
+                    },
+                    contentType: 'application/json; charset=utf-8',
+                    success: function(result) {
+
+                    },
+                    processData: false,
+                    data: JSON.stringify(data)
+                });
+            } else {
+    
+            }
+        }
+    </script>
+
+</body>
+</html>

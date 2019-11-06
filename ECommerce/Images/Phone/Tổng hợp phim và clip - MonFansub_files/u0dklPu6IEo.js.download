@@ -1,0 +1,3 @@
+if (self.CavalryLogger) { CavalryLogger.start_js(["P9QGY"]); }
+
+__d("react-relay/getRootVariablesForFragments",["relay-runtime"],(function(a,b,c,d,e,f){"use strict";__p&&__p();var g=b("relay-runtime").getSelector;function a(a,b){var c={};Object.keys(a).forEach(function(d){var e=a[d];d=b[d];e=g(e,d);e=e!=null&&e.kind==="PluralReaderSelector"?(d=(d=e.selectors[0])==null?void 0:d.owner.variables)!=null?d:{}:(d=e==null?void 0:e.owner.variables)!=null?d:{};c=babelHelpers["extends"]({},c,e)});return c}e.exports=a}),null);
