@@ -8,5 +8,6 @@
     <GeneratedProductId>{44abcc98-6e60-47d9-94ef-29b5c0970842}</GeneratedProductId>
     <GeneratedAppVersion>1.0.0.0</GeneratedAppVersion>
     <GeneratedClientSecret>pnvVNppvjZGktJRai6t9bVTCSaxZwD1ZUkHe8fsQ6v8=</GeneratedClientSecret>
+    <OfficeAndSharePointStartAction>OfficeDesktopClient</OfficeAndSharePointStartAction>
   </PropertyGroup>
 </Project>

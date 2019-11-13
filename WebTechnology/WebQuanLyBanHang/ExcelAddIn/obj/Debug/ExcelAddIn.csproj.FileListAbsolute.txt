@@ -1,2 +1,3 @@
 C:\Users\Hello\Desktop\Web\WebTechnology\WebQuanLyBanHang\ExcelAddIn\bin\Debug\ApplicationInsights.config
 C:\Users\Hello\Desktop\Web\WebTechnology\WebQuanLyBanHang\ExcelAddIn\bin\Debug\ExcelAddIn.dll.config
+C:\Users\Hello\Desktop\Web\WebTechnology\WebQuanLyBanHang\ExcelAddIn\obj\Debug\ExcelAddIn.csprojAssemblyReference.cache

@@ -9,12 +9,12 @@ namespace Repository
 {
     public class ProductDeleteByIdRepository : Connection
     {
-        public int ProductId { get; set; }
+        public string ProductId { get; set; }
         public bool Execute()
         {
             using(var cmd = new Query())
             {
-                cmd.QueryString = "DELETE FROM [Product] WHERE [Product].ProductId = " + this.ProductId;
+                cmd.QueryString = "DELETE FROM [Product] WHERE [Product].ProductId = N'" + this.ProductId+"'";
                 return cmd.ExecuteQueryNonReader();
             }
         }

@@ -1,4 +1,6 @@
 ﻿using ConnectDataBase;
+using Domain;
+using Newtonsoft.Json;
 using QuanLyBanHang.Models;
 using Repository;
 using System;
@@ -19,6 +21,29 @@ namespace QuanLyBanHang.Controllers
             return View();
         }
         
+        [HttpPost]
+        public ActionResult ProductList(ProductListAction CommandAction)
+        {
+            var products = CommandAction.Execute();
+            
+            List<string[]> aa = new List<string[]>();
+            aa.Add(new string[] { "MaSP","Nhóm SP","Tên SP","Giá","Barcode","Số lượng"});
+            products.ForEach(delegate (dynamic a)
+            {
+                List<string> bb = new List<string>();
+                bb.Add(a.ProductId.ToString());
+                bb.Add(a.CategoryName.ToString());
+                bb.Add(a.ProductName.ToString());
+                bb.Add(a.Price.ToString());
+                bb.Add(a.Barcode.ToString());
+                bb.Add(a.Qty.ToString());
+                aa.Add(bb.ToArray());
+            });
+            var rs = aa.ToArray();
+
+            return JsonExpando(rs);
+        }
+
         public ActionResult PrintBarCode(ProductListAction CommandAction)
         {
             this.ViewBag.Result = CommandAction.Execute();
@@ -32,7 +57,7 @@ namespace QuanLyBanHang.Controllers
                 this.ViewBag.Result = CommandAction.Execute();
                 this.ViewBag.EditFlag = "M";
             }
-            using (var cmd = new ProductGroupSearchRepository())
+            using (var cmd = new CategorySearchRepository())
             {
                 this.ViewBag.Product = cmd.Exeucte();
             }
@@ -64,16 +89,16 @@ namespace QuanLyBanHang.Controllers
 
             }
         }
-        public ActionResult ProductGroupList(ProductGroupListAction CommandAction,bool isPopup = false)
+        public ActionResult CategoryList(CategoryListAction CommandAction,bool isPopup = false)
         {
             this.ViewBag.isPopup = isPopup;
             this.ViewBag.Result = CommandAction.Execute();
             return View();
         }
-        public ActionResult ProductGroupInput(ProductGroupInputAction CommandAction)
+        public ActionResult CategoryInput(CategoryInputAction CommandAction)
         {
             this.ViewBag.Result = new List<dynamic>();
-            if(CommandAction.ProductGroupId != null)
+            if(CommandAction.CategoryId != null)
             {
                 this.ViewBag.Result = CommandAction.Execute();
                 this.ViewBag.EditFlag = "M";
@@ -82,7 +107,7 @@ namespace QuanLyBanHang.Controllers
         }
 
         [HttpPost]
-        public ActionResult ProductGroupExecuteSave(ProductGroupExecuteSaveAction CommandAction)
+        public ActionResult CategoryExecuteSave(CategoryExecuteSaveAction CommandAction)
         {
             try
             {
@@ -95,7 +120,7 @@ namespace QuanLyBanHang.Controllers
             }
         }
         [HttpPost]
-        public ActionResult ProductGroupExecuteDeleteById(ProductGroupExecuteDeleteByIdAction CommandAction)
+        public ActionResult CategoryExecuteDeleteById(CategoryExecuteDeleteByIdAction CommandAction)
         {
             try
             {

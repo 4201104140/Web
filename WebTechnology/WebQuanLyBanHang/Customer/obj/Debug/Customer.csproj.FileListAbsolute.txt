@@ -17,6 +17,6 @@ D:\__dhsp\___web\WebQuanLyBanHang\Customer\obj\Debug\Customer.dll
 D:\__dhsp\___web\WebQuanLyBanHang\Customer\obj\Debug\Customer.pdb
 C:\Users\Hello\Desktop\Web\WebTechnology\WebQuanLyBanHang\Customer\bin\Debug\Customer.dll
 C:\Users\Hello\Desktop\Web\WebTechnology\WebQuanLyBanHang\Customer\bin\Debug\Customer.pdb
-C:\Users\Hello\Desktop\Web\WebTechnology\WebQuanLyBanHang\Customer\obj\Debug\Customer.csprojAssemblyReference.cache
 C:\Users\Hello\Desktop\Web\WebTechnology\WebQuanLyBanHang\Customer\obj\Debug\Customer.dll
 C:\Users\Hello\Desktop\Web\WebTechnology\WebQuanLyBanHang\Customer\obj\Debug\Customer.pdb
+C:\Users\Hello\Desktop\Web\WebTechnology\WebQuanLyBanHang\Customer\obj\Debug\Customer.csprojAssemblyReference.cache

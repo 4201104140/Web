@@ -9,7 +9,7 @@ namespace QuanLyBanHang.Models
 {
     public class ProductGetByIdAction
     {
-        public int ProductId { get; set; }
+        public string ProductId { get; set; }
         public List<dynamic> Execute()
         {
             using(var cmd = new ProductGetByIdRepository())

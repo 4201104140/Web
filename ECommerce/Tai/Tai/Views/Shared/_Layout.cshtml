@@ -3,53 +3,46 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content=" Nhom 13 | Eshop ">
+    <meta name="keywords" content="clothes, fashion, shop">
     <title>@ViewData["Title"]</title>
-    @RenderSection("metaSocial",required:false)
-    <link href="~/css/bootstrap.min.css" rel="stylesheet" />
-    <link href="~/css/animate.css" rel="stylesheet" />
-    <link href="~/css/font-awesome.min.css" rel="stylesheet" />
-    <link href="~/css/simple-line-icons.css" rel="stylesheet" />
-    <link href="~/css/pe-icon-7-stroke.min.css" rel="stylesheet" />
-    <link href="~/css/owl.carousel.css" rel="stylesheet" />
-    <link href="~/css/owl.transitions.css" rel="stylesheet" />
-    <link href="~/css/flexslider.css" rel="stylesheet" />
-    <link href="~/css/jquery-ui.css" rel="stylesheet" />
-    <link href="~/css/revolution-slider.css" rel="stylesheet" />
-    <link href="~/css/quick_view_popup.css" rel="stylesheet" />
-    <link href="~/css/style.css" rel="stylesheet" />
-    <link href="~/css/responsive.css" rel="stylesheet" />
+    @RenderSection("metaSocial", required: false)
+    <!-- Favicon -->
+    <link href="favicon.ico" rel="shortcut icon" />
+    <link href="https://fonts.googleapis.com/css?family=Josefin+Sans:300,300i,400,400i,700,700i" rel="stylesheet">
+
+    <link rel="stylesheet" href="~/divisima/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="~/divisima/css/font-awesome.min.css"/>
+    <link rel="stylesheet" href="~/divisima/css/flaticon.css"/>
+    <link rel="stylesheet" href="~/divisima/css/jquery-ui.min.css"/>
+    <link rel="stylesheet" href="~/divisima/css/owl.carousel.min.css"/>
+    <link rel="stylesheet" href="~/divisima/css/animate.css"/>
+    <link rel="stylesheet" href="~/divisima/css/style.css"/>
+
 </head>
 <body>
-    <div id="page" style="min-height:800px;">
-        <!-- Header -->
-        <header>
-            @await Html.PartialAsync("_MyHeader")
-        </header>
-        <!-- end header -->
-        @*@await Html.PartialAsync("_HorizontalMenu")*@
-        @await Component.InvokeAsync("HorizontalMenu")
-
-
-        <!-- Breadcrumbs -->
-        @RenderSection("Breadcrumbs", required: false)
-        <!-- /Breadcrumbs -->
-
-        <section class="main-container">
-            @RenderBody()
-            @RenderSection("MenuLeft", required: false)
-        </section>
-
-        <!-- Footer -->
-        @await Html.PartialAsync("_MyFooter")
-        <!-- /Footer -->
+    <!-- Page Preloder -->
+    <div id="preloder">
+        <div class="loader"></div>
     </div>
-    <script src="~/js/jquery.min.js"></script>
-    <script src="~/js/bootstrap.min.js"></script>
-    <script src="~/js/owl.carousel.min.js"></script>
-    <script src="~/js/mobile-menu.js"></script>
-    <script src="~/js/jquery-ui.js"></script>
-    <script src="~/js/main.js"></script>
-    <script src="~/js/revolution-slider.js"></script>
+    <header class="header-section">
+        @await Html.PartialAsync("_HeaderTop")
+        @await Component.InvokeAsync("HorizontalMenu")
+    </header>
+    <div>
+        @RenderBody()
+    </div>  
+    <section class="footer-section">
+        @await Html.PartialAsync("_Footer")
+    </section>
+    <script src="~/divisima/js/jquery-3.2.1.min.js"></script>
+    <script src="~/divisima/js/bootstrap.min.js"></script>
+    <script src="~/divisima/js/jquery.slicknav.min.js"></script>
+    <script src="~/divisima/js/owl.carousel.min.js"></script>
+    <script src="~/divisima/js/jquery.nicescroll.min.js"></script>
+    <script src="~/divisima/js/jquery.zoom.min.js"></script>
+    <script src="~/divisima/js/jquery-ui.min.js"></script>
+    <script src="~/divisima/js/main.js"></script>
 
     @RenderSection("Scripts", required: false)
 </body>

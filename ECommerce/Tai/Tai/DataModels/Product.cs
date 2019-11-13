@@ -24,7 +24,7 @@ namespace Tai.DataModels
         public double ProductPrice { get; set; }
         [Range(0, 100)]
         public double SaleOff { get; set; }
-        [MaxLength(68)]
+        [MaxLength(6)]
         public string CategoryId { get; set; }
         [ForeignKey("CategoryId")]
         public Category Category { get; set; }

@@ -10,12 +10,19 @@ namespace Repository
 {
     public class ProductInsertRepository : Connection
     {
+        string rand()
+        {
+            var rng = new Random();
+            int txt = rng.Next(1000);
+
+            return txt.ToString("000");
+        }
         public Product Item { get; set; }
         public bool Execute()
         {
             using(var cmd = new Query())
             {
-                cmd.QueryString = "INSERT INTO [dbo].[Product]([ProductId] ,[ProductName] ,[Price] ,[Barcode] ,[Qty],[ProductGroupId]) VALUES ((SELECT isnull(MAX(ProductId),0) + 1 from [Product]),N'" + Item.ProductName + "'," + Item.Price + ",'" + Item.Barcode + "'," + Item.Qty + ","+Item.ProductGroupId+")";
+                cmd.QueryString = "INSERT INTO [dbo].[Product]([ProductId] ,[ProductName] ,[ProductPrice] ,[Barcode] ,[ProductQuantity],[CategoryId]) VALUES (N'"+Item.CategoryId+rand()+"',N'" + Item.ProductName + "'," + Item.ProductPrice + ",'" + Item.Barcode + "'," + Item.ProductQuantity + ",N'"+Item.CategoryId+"')";
                 return cmd.ExecuteQueryNonReader();
             }
         }

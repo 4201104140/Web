@@ -40,11 +40,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="ProductGroup\ProductGroupDeleteByIdRepository.cs" />
-    <Compile Include="ProductGroup\ProductGroupGetByIdRepository.cs" />
-    <Compile Include="ProductGroup\ProductGroupInsertRepository.cs" />
-    <Compile Include="ProductGroup\ProductGroupSearchRepository.cs" />
-    <Compile Include="ProductGroup\ProductGroupUpdateRepository.cs" />
+    <Compile Include="ProductGroup\CategoryDeleteByIdRepository.cs" />
+    <Compile Include="ProductGroup\CategoryGetByIdRepository.cs" />
+    <Compile Include="ProductGroup\CategoryInsertRepository.cs" />
+    <Compile Include="ProductGroup\CategorySearchRepository.cs" />
+    <Compile Include="ProductGroup\CategoryUpdateRepository.cs" />
     <Compile Include="Product\ProductDeleteByIdRepository.cs" />
     <Compile Include="Product\ProductGetByIdRepository.cs" />
     <Compile Include="Product\ProductInsertRepository.cs" />

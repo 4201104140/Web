@@ -40,7 +40,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="ProductGroup\ProductGroupExecuteSaveBusiness.cs" />
+    <Compile Include="ProductGroup\CategoryExecuteSaveBusiness.cs" />
     <Compile Include="Product\ProductExecuteSaveBusiness.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

@@ -7,12 +7,12 @@ namespace QuanLyBanHang.Models
 {
     public class ProductInputAction
     {
-        public int? ProductId { get; set; }
+        public string ProductId { get; set; }
         public List<dynamic> Execute()
         {
             using(var cmd = new ProductGetByIdRepository())
             {
-                cmd.ProductId = this.ProductId.Value;
+                cmd.ProductId = this.ProductId;
                 return cmd.Execute();
             }
         }

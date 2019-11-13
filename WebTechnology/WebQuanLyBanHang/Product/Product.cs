@@ -8,11 +8,17 @@ namespace Domain
 {
     public class Product
     {
-        public int ProductId { get; set; }
-        public int ProductGroupId { get; set; }
+        public string ProductId { get; set; }
         public string ProductName { get; set; }
-        public long Price { get; set; }
+        public string Images { get; set; }
+        public string ProductDescription { get; set; }
+        public string ProductDetail { get; set; }
+        public int ProductQuantity { get; set; }
         public string Barcode { get; set; }
-        public int Qty { get; set; }
+        public double ProductPrice { get; set; }
+        public double SaleOff { get; set; }
+        public DateTime SaleOffDate { get; set; }
+        public string CategoryId { get; set; }
+
     }
 }

@@ -20,3 +20,4 @@ C:\Users\Hello\Desktop\Web\WebTechnology\WebQuanLyBanHang\Sale\bin\Debug\Sale.dl
 C:\Users\Hello\Desktop\Web\WebTechnology\WebQuanLyBanHang\Sale\bin\Debug\Sale.pdb
 C:\Users\Hello\Desktop\Web\WebTechnology\WebQuanLyBanHang\Sale\obj\Debug\Sale.dll
 C:\Users\Hello\Desktop\Web\WebTechnology\WebQuanLyBanHang\Sale\obj\Debug\Sale.pdb
+C:\Users\Hello\Desktop\Web\WebTechnology\WebQuanLyBanHang\Sale\obj\Debug\Sale.csprojAssemblyReference.cache

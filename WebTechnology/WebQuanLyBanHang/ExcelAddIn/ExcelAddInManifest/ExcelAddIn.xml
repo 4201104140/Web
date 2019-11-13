@@ -17,7 +17,7 @@
   <ProviderName>Nhóm 01</ProviderName>
   <DefaultLocale>en-US</DefaultLocale>
   <!-- The display name of your add-in. Used on the store and various places of the Office UI such as the add-ins dialog. -->
-  <DisplayName DefaultValue="Report with Excel" />
+  <DisplayName DefaultValue="Xuất Excel" />
   <Description DefaultValue="ExcelAddIn Description"/>
   <!-- Icon for your add-in. Used on installation screens and the add-ins dialog. -->
   <IconUrl DefaultValue="~remoteAppUrl/Content/Images/export.png" />
@@ -127,14 +127,14 @@
       </bt:Urls>
       <!-- ShortStrings max characters==125. -->
       <bt:ShortStrings>
-        <bt:String id="Contoso.TaskpaneButton.Label" DefaultValue="Nhóm 01" />
-        <bt:String id="Contoso.Group1Label" DefaultValue="Commands Group" />
+        <bt:String id="Contoso.TaskpaneButton.Label" DefaultValue="Quản lý" />
+        <bt:String id="Contoso.Group1Label" DefaultValue="Team01" />
         <bt:String id="Contoso.GetStarted.Title" DefaultValue="Xuất dữ liệu, biểu đồ." />
       </bt:ShortStrings>
       <!-- LongStrings max characters==250. -->
       <bt:LongStrings>
-        <bt:String id="Contoso.TaskpaneButton.Tooltip" DefaultValue="Click to Show a Nhóm 01" />
-        <bt:String id="Contoso.GetStarted.Description" DefaultValue="Go to the HOME tab and click the 'Show Nhóm 01' button to get started." />
+        <bt:String id="Contoso.TaskpaneButton.Tooltip" DefaultValue="Kết nối quản lý bán hàng" />
+        <bt:String id="Contoso.GetStarted.Description" DefaultValue="Nhấn quản lý để bắt đầu" />
       </bt:LongStrings>
     </Resources>
   </VersionOverrides>

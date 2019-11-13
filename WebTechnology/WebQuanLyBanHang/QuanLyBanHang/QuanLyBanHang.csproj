@@ -181,10 +181,10 @@
     <Compile Include="Models\Login\LoginExecuteSearchAction.cs" />
     <Compile Include="Models\Login\OAuthAction.cs" />
     <Compile Include="Models\Login\OAuthUpdateAction.cs" />
-    <Compile Include="Models\ProductGroup\ProductGroupExecuteDeleteByIdAction.cs" />
-    <Compile Include="Models\ProductGroup\ProductGroupExecuteSaveAction.cs" />
-    <Compile Include="Models\ProductGroup\ProductGroupInputAction.cs" />
-    <Compile Include="Models\ProductGroup\ProductGroupListAction.cs" />
+    <Compile Include="Models\Category\CategoryExecuteDeleteByIdAction.cs" />
+    <Compile Include="Models\Category\CategoryExecuteSaveAction.cs" />
+    <Compile Include="Models\Category\CategoryInputAction.cs" />
+    <Compile Include="Models\Category\CategoryListAction.cs" />
     <Compile Include="Models\Product\ProductExecuteDeleteByIdAction.cs" />
     <Compile Include="Models\Product\ProductExecuteSaveAction.cs" />
     <Compile Include="Models\Product\ProductGetByIdAction.cs" />
@@ -877,6 +877,7 @@
     <Content Include="Scripts\flaty.js" />
     <Content Include="Scripts\function.js" />
     <None Include="Scripts\jquery-3.4.1.intellisense.js" />
+    <Content Include="Scripts\getdata.js" />
     <Content Include="Scripts\jquery-3.4.1.js" />
     <Content Include="Scripts\jquery-3.4.1.min.js" />
     <Content Include="Scripts\jquery-3.4.1.slim.js" />
@@ -1465,6 +1466,7 @@
     <Content Include="UI\semantic.js" />
     <Content Include="UI\semantic.min.css" />
     <Content Include="UI\semantic.min.js" />
+    <Content Include="UI\tablesort.js" />
     <Content Include="UI\themes\basic\assets\fonts\icons.svg" />
     <Content Include="UI\themes\default\assets\fonts\brand-icons.svg" />
     <Content Include="UI\themes\default\assets\fonts\icons.svg" />
@@ -1488,14 +1490,14 @@
     <Content Include="Views\Customer\CustomerList.cshtml" />
     <Content Include="Views\Vender\VenderList.cshtml" />
     <Content Include="Views\Product\ProductList.cshtml" />
-    <Content Include="Views\Product\ProductGroupList.cshtml" />
+    <Content Include="Views\Product\CategoryList.cshtml" />
     <Content Include="Views\Login\Index.cshtml" />
     <Content Include="Views\Shared\_LayoutInput.cshtml" />
     <Content Include="Views\Customer\CustomerInput.cshtml" />
     <Content Include="Views\Employee\EmployeeInput.cshtml" />
     <Content Include="Views\Vender\VenderInput.cshtml" />
     <Content Include="Views\Product\ProductInput.cshtml" />
-    <Content Include="Views\Product\ProductGroupInput.cshtml" />
+    <Content Include="Views\Product\CategoryInput.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Views\Sale\SaleView.cshtml" />
     <Content Include="Views\Sale\SaleInput.cshtml" />

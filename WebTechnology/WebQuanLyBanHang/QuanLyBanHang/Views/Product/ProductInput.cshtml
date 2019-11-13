@@ -44,11 +44,11 @@
                                 <label class="col-sm-3 col-lg-2 control-label">Nhóm hàng hóa:</label>
                                 <div class="col-sm-6 col-lg-4 controls">
                                     <div class="input-group">
-                                        <span class="input-group-addon" id="ProductGroupId_span">@this.ViewBag.Result[0].ProductGroupId</span>
-                                        <input type="hidden" id="ProductGroupId" name="ProductGroupId"/>
-                                        <input type="text" id="ProductGroupName" value="@this.ViewBag.Result[0].ProductGroupName" placeholder="Tên nhóm hàng hóa" class="form-control">
+                                        <span class="input-group-addon" id="CategoryId_span">@this.ViewBag.Result[0].CategoryId</span>
+                                        <input type="hidden" id="CategoryId" name="CategoryId"/>
+                                        <input type="text" id="CategoryName" value="@this.ViewBag.Result[0].CategoryName" placeholder="Tên nhóm hàng hóa" class="form-control">
                                         <span class="input-group-btn">
-                                            <button class="btn btn-yellow" onclick="btnSearchProductGroup();"  type="button">Tìm kiếm!</button>
+                                            <button class="btn btn-yellow" onclick="btnSearchCategory();"  type="button">Tìm kiếm!</button>
                                         </span>
                                     </div>
                                 </div>
@@ -56,13 +56,13 @@
                             <div class="form-group">
                                 <label class="col-sm-3 col-lg-2 control-label" for="Phone">Giá:</label>
                                 <div class="col-sm-6 col-lg-4 controls">
-                                    <input type="number" name="Price" id="Price" value="@this.ViewBag.Result[0].Price" class="form-control" data-rule-required="true" data-rule-minlength="3" />
+                                    <input type="number" name="ProductPrice" id="ProductPrice" value="@this.ViewBag.Result[0].ProductPrice" class="form-control" data-rule-required="true" data-rule-minlength="3" />
                                 </div>
                             </div>
                             <div class="form-group">
                                 <label class="col-sm-3 col-lg-2 control-label" for="Email">Số lượng:</label>
                                 <div class="col-sm-6 col-lg-4 controls">
-                                    <input type="number" name="Qty" id="Qty" value="@this.ViewBag.Result[0].Qty" class="form-control" data-rule-required="true" data-rule-minlength="3" />
+                                    <input type="number" name="ProductQuantity" id="ProductQuantity" value="@this.ViewBag.Result[0].ProductQuantity" class="form-control" data-rule-required="true" data-rule-minlength="3" />
                                 </div>
                             </div>
                             <div class="form-group">
@@ -74,7 +74,7 @@
 
                             <div class="form-group">
                                 <div class="col-sm-9 col-sm-offset-3 col-lg-10 col-lg-offset-2">
-                                    <input type="button" onclick="onBtnSave(@this.ViewBag.Result[0].ProductId);" class="btn btn-primary" value="Xác nhận">
+                                    <input type="button" onclick="onBtnSave('@this.ViewBag.Result[0].ProductId');" class="btn btn-primary" value="Xác nhận">
                                     <button type="button" onclick="window.close();" class="btn">Hủy bỏ</button>
                                 </div>
                             </div>
@@ -133,11 +133,11 @@ else
                                 <label class="col-sm-3 col-lg-2 control-label">Nhóm hàng hóa:</label>
                                 <div class="col-sm-6 col-lg-4 controls">
                                     <div class="input-group">
-                                        <span class="input-group-addon" id="ProductGroupId_span">0</span>
-                                        <input type="hidden" id="ProductGroupId" name="ProductGroupId" />
-                                        <input type="text" id="ProductGroupName" placeholder="Tên nhóm hàng hóa" class="form-control">
+                                        <span class="input-group-addon" id="CategoryId_span">0</span>
+                                        <input type="hidden" id="CategoryId" name="CategoryId" />
+                                        <input type="text" id="CategoryName" placeholder="Tên nhóm hàng hóa" class="form-control">
                                         <span class="input-group-btn">
-                                            <button class="btn btn-yellow" onclick="btnSearchProductGroup();" type="button">Tìm kiếm!</button>
+                                            <button class="btn btn-yellow" onclick="btnSearchCategory();" type="button">Tìm kiếm!</button>
                                         </span>
                                     </div>
                                 </div>
@@ -145,13 +145,13 @@ else
                             <div class="form-group">
                                 <label class="col-sm-3 col-lg-2 control-label" for="Phone">Giá:</label>
                                 <div class="col-sm-6 col-lg-4 controls">
-                                    <input type="number" name="Price" id="Price" value="0" class="form-control" data-rule-required="true" data-rule-minlength="3" />
+                                    <input type="number" name="ProductPrice" id="ProductPrice" value="0" class="form-control" data-rule-required="true" data-rule-minlength="3" />
                                 </div>
                             </div>
                             <div class="form-group">
                                 <label class="col-sm-3 col-lg-2 control-label" for="Qty">Số lượng:</label>
                                 <div class="col-sm-6 col-lg-4 controls">
-                                    <input type="number" name="Qty" id="Qty" value="0" class="form-control" data-rule-required="true" data-rule-minlength="3" />
+                                    <input type="number" name="ProductQuantity" id="ProductQuantity" value="0" class="form-control" data-rule-required="true" data-rule-minlength="3" />
                                 </div>
                             </div>
                             <div class="form-group">
@@ -183,28 +183,26 @@ else
 }
 <script>
     function AddData(id,name) {
-        $("#ProductGroupId_span").html(id);
-        $("#ProductGroupId").val(id);
-        $("#ProductGroupName").val(name);
+        $("#CategoryId_span").html(id);
+        $("#CategoryId").val(id);
+        $("#CategoryName").val(name);
     }
-    function btnSearchProductGroup() {
+    function btnSearchCategory() {
         this.openPopup({
-            url : '/Product/ProductGroupList'
+            url : '/Product/CategoryList'
         });
     }
     function onBtnSave(id = null) {
-        if (id != null) {
-
-        }
         var obj = {};
         $.each($("#validation-form").serializeArray(), function (k, v) {
             obj[v.name] = v.value;
             if (v.name == 'select')
-                obj['ProductGroupId'] = v.value;
+                obj['CategoryId'] = v.value;
         });
         if (!obj["ProductId"]) {
             obj["ProductId"] = id;
         }
+        debugger;
         if (id != null) {
             $.post(
                 '/Product/ProductExecuteSave',

@@ -1,0 +1,23 @@
+﻿using ConnectDataBase;
+using Domain;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Repository
+{
+    public class CategoryUpdateRepository : Connection
+    {
+        public Category Item { get; set; }
+        public bool Execute()
+        {
+            using(var cmd = new Query())
+            {
+                cmd.QueryString = "UPDATE [dbo].[Category] SET [CategoryName] = N'" + Item.CategoryName + "' ,[Remark] = '" + Item.CategoryRemark+ "' WHERE [Category].CategoryId = " + Item.CategoryId;
+                return cmd.ExecuteQueryNonReader();
+            }
+        }
+    }
+}

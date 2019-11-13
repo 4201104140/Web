@@ -23,9 +23,7 @@ namespace Tai.Migrations
                 {
                     b.Property<string>("CategoryId")
                         .ValueGeneratedOnAdd()
-                        .HasMaxLength(68);
-
-                    b.Property<string>("CategoryDescription");
+                        .HasMaxLength(6);
 
                     b.Property<string>("CategoryIcon")
                         .HasMaxLength(20);
@@ -35,7 +33,10 @@ namespace Tai.Migrations
                         .HasMaxLength(250);
 
                     b.Property<string>("CategoryParentId")
-                        .HasMaxLength(68);
+                        .HasMaxLength(6);
+
+                    b.Property<string>("CategoryRemark")
+                        .HasMaxLength(250);
 
                     b.HasKey("CategoryId");
 
@@ -99,7 +100,7 @@ namespace Tai.Migrations
                         .HasMaxLength(68);
 
                     b.Property<string>("CategoryId")
-                        .HasMaxLength(68);
+                        .HasMaxLength(6);
 
                     b.Property<string>("Images")
                         .HasMaxLength(100);
