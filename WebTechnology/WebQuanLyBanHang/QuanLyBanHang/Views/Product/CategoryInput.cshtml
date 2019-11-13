@@ -41,16 +41,29 @@
                                 </div>
                             </div>
                             <div class="form-group">
-                                <label class="col-sm-3 col-lg-2 control-label" for="Remark">Ghi chú:</label>
+                                <label class="col-sm-3 col-lg-2 control-label">Tên nhóm cha:</label>
                                 <div class="col-sm-6 col-lg-4 controls">
-                                    
-                                    <textarea type="text" name="Remark" id="Remark" value="@this.ViewBag.Result[0].CategoryRemark" class="form-control" data-rule-required="true" data-rule-minlength="3" rows="5"></textarea>
+                                    <div class="input-group">
+                                        <span class="input-group-addon" id="CategoryId_span">@this.ViewBag.Result[0].CategoryParentId</span>
+                                        <input type="hidden" id="CategoryParentId" name="CategoryParentId" />
+                                        <input type="text" id="CategoryParentName" placeholder="Tên nhóm hàng hóa" class="form-control" value="@this.ViewBag.Result[0].CategoryParentName">
+                                        <span class="input-group-btn">
+                                            <button class="btn btn-yellow" onclick="btnSearchCategory();" type="button">Tìm kiếm!</button>
+                                        </span>
+                                    </div>
                                 </div>
                             </div>
-                            
+                            <div class="form-group">
+                                <label class="col-sm-3 col-lg-2 control-label" for="Remark">Ghi chú:</label>
+                                <div class="col-sm-6 col-lg-4 controls">
+
+                                    <textarea type="text" name="CategoryRemark" id="CategoryRemark" value="@this.ViewBag.Result[0].CategoryRemark" class="form-control" data-rule-required="true" data-rule-minlength="3" rows="5"></textarea>
+                                </div>
+                            </div>
+
                             <div class="form-group">
                                 <div class="col-sm-9 col-sm-offset-3 col-lg-10 col-lg-offset-2">
-                                    <input type="button" onclick="onBtnSave(@this.ViewBag.Result[0].CategoryId);" class="btn btn-primary" value="Xác nhận">
+                                    <input type="button" onclick="onBtnSave('@this.ViewBag.Result[0].CategoryId');" class="btn btn-primary" value="Xác nhận">
                                     <button type="button" onclick="window.close();" class="btn">Hủy bỏ</button>
                                 </div>
                             </div>
@@ -106,12 +119,25 @@ else
                                 </div>
                             </div>
                             <div class="form-group">
-                                <label class="col-sm-3 col-lg-2 control-label" for="Remark">Ghi chú:</label>
+                                <label class="col-sm-3 col-lg-2 control-label">Tên nhóm cha:</label>
                                 <div class="col-sm-6 col-lg-4 controls">
-                                    <textarea type="text" name="Remark" id="Remark" value="" class="form-control" data-rule-required="true" data-rule-minlength="3" rows="5"></textarea>
+                                    <div class="input-group">
+                                        <span class="input-group-addon" id="CategoryId_span">0</span>
+                                        <input type="hidden" id="CategoryParentId" name="CategoryParentId" />
+                                        <input type="text" id="CategoryParentName" placeholder="Tên nhóm hàng hóa" class="form-control">
+                                        <span class="input-group-btn">
+                                            <button class="btn btn-yellow" onclick="btnSearchCategory();" type="button">Tìm kiếm!</button>
+                                        </span>
+                                    </div>
                                 </div>
                             </div>
-                            
+                            <div class="form-group">
+                                <label class="col-sm-3 col-lg-2 control-label" for="Remark">Ghi chú:</label>
+                                <div class="col-sm-6 col-lg-4 controls">
+                                    <textarea type="text" name="CategoryRemark" id="CategoryRemark" value="" class="form-control" data-rule-required="true" data-rule-minlength="3" rows="5"></textarea>
+                                </div>
+                            </div>
+
                             <div class="form-group">
                                 <div class="col-sm-9 col-sm-offset-3 col-lg-10 col-lg-offset-2">
                                     <input type="button" onclick="onBtnSave();" class="btn btn-primary" value="Xác nhận">
@@ -174,6 +200,17 @@ else
                 }
             );
         }
+    }
+    function AddData(id, name) {
+        debugger;
+        $("#CategoryId_span").html(id);
+        $("#CategoryParentId").val(id);
+        $("#CategoryParentName").val(name);
+    }
+    function btnSearchCategory() {
+        this.openPopup({
+            url: '/Product/CategoryList?CommandAction.isChild=' + true
+        });
     }
 </script>
 

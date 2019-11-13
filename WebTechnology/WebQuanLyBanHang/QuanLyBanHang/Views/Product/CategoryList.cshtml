@@ -39,7 +39,7 @@
                     <br /><br />
                     <div class="clearfix"></div>
                     <div class="table-responsive" style="border:0">
-                        <table class="table table-advance table-striped table-bordered" id="table1">
+                        <table class="table table-striped table-bordered" id="table1">
                             <thead>
                                 <tr>
                                     <th>Mã nhóm</th>
@@ -60,9 +60,16 @@
                                         <td>
                                             <a title="Sửa" href="#" onclick="btnEdit('@item.CategoryId');" type="button" class="btn btn-default btn-sm"><span class="fa fa-pencil-square-o"></span></a>
                                             <a title="Xóa" href="#" onclick="btnDelete('@item.CategoryId'); return false;" type="button" class="btn btn-default btn-sm"><span class="fa fa-trash-o"></span></a>
-                                            @if (this.ViewBag.isPopup && !string.IsNullOrEmpty(item.CategoryParentName.ToString()))
+                                            @if (this.ViewBag.isPopup)
                                             {
-                                                <a title="Chọn" href="#" onclick="window.opener.AddData('@item.CategoryId','@item.CategoryName'); window.close();" type="button" class="btn btn-default btn-sm"><span class="fa fa-check"></span></a>
+                                                if (this.ViewBag.isChild && string.IsNullOrEmpty(item.CategoryParentId.ToString()))
+                                                {
+                                                    <a title="Chọn" href="#" onclick="window.opener.AddData('@item.CategoryId','@item.CategoryName'); window.close();" type="button" class="btn btn-default btn-sm"><span class="fa fa-check"></span></a>
+                                                }
+                                                if (!this.ViewBag.isChild && !string.IsNullOrEmpty(item.CategoryParentId.ToString()))
+                                                {
+                                                    <a title="Chọn" href="#" onclick="window.opener.AddData('@item.CategoryId','@item.CategoryName'); window.close();" type="button" class="btn btn-default btn-sm"><span class="fa fa-check"></span></a>
+                                                }
                                             }
                                         </td>
                                     </tr>

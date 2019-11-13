@@ -15,7 +15,7 @@ namespace Repository
         {
             using(var cmd = new Query())
             {
-                cmd.QueryString = "UPDATE [dbo].[Category] SET [CategoryName] = N'" + Item.CategoryName + "' ,[Remark] = '" + Item.CategoryRemark+ "' WHERE [Category].CategoryId = " + Item.CategoryId;
+                cmd.QueryString = "UPDATE [dbo].[Category] SET [CategoryName] = N'" + Item.CategoryName + "' ,[CategoryRemark] = N'" + Item.CategoryRemark+ "', [CategoryParentId] = N'"+ Item.CategoryParentId + "' WHERE [Category].CategoryId = N'" + Item.CategoryId+"'";
                 return cmd.ExecuteQueryNonReader();
             }
         }

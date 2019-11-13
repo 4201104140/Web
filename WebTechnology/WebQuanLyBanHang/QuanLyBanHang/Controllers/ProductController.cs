@@ -92,6 +92,7 @@ namespace QuanLyBanHang.Controllers
         public ActionResult CategoryList(CategoryListAction CommandAction,bool isPopup = false)
         {
             this.ViewBag.isPopup = isPopup;
+            this.ViewBag.isChild = CommandAction.isChild;
             this.ViewBag.Result = CommandAction.Execute();
             return View();
         }

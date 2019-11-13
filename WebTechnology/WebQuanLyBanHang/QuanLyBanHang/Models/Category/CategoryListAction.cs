@@ -8,6 +8,7 @@ namespace QuanLyBanHang.Models
 {
     public class CategoryListAction
     {
+        public bool isChild { get; set; }
         public List<dynamic> Execute()
         {
             using (var cmd = new CategorySearchRepository())

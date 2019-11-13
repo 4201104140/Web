@@ -14,7 +14,7 @@ namespace Repository
         {
             using(var cmd = new Query())
             {
-                cmd.QueryString = "SELECT * FROM [Category] WHERE [Category].CategoryId = N'" + this.CategoryId+"'";
+                cmd.QueryString = "SELECT child.*, dad.CategoryName as CategoryParentName FROM [Category] AS child LEFT JOIN [Category] AS dad ON child.CategoryParentId = dad.CategoryId WHERE [child].CategoryId = N'" + this.CategoryId+"'";
                 return cmd.ExecuteQuery();
             }
         }
