@@ -8,9 +8,10 @@ namespace Domain
 {
     public class SaleItem
     {
-        public int SaleItemId { get; set; }
-        public int SaleId { get; set; }
-        public int ProductId { get; set; }
-        public int Qty { get; set; }
+        public string SaleItemId { get; set; }
+        public string SaleId { get; set; }
+        public string ProductId { get; set; }
+        public double ProductQuantity { get; set; }
+        public double ProductPrice { get; set; }
     }
 }

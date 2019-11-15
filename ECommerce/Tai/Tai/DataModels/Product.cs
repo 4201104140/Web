@@ -11,7 +11,7 @@ namespace Tai.DataModels
     public class Product
     {
         [Key]
-        [MaxLength(68)]
+        [MaxLength(6)]
         public string ProductId { get; set; }
         [Required]
         [MaxLength(250)]
@@ -20,10 +20,12 @@ namespace Tai.DataModels
         public string Images { get; set; }
         public string ProductDescription { get; set; }
         public string ProductDetail { get; set; }
+        public string Barcode { get; set; }
         public int ProductQuantity { get; set; }
         public double ProductPrice { get; set; }
         [Range(0, 100)]
         public double SaleOff { get; set; }
+        public DateTime SaleOffDate { get; set; }
         [MaxLength(6)]
         public string CategoryId { get; set; }
         [ForeignKey("CategoryId")]

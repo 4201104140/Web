@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Threading.Tasks;
+using Tai.DataModels;
 
 namespace Tai.Models.ProductModels
 {
@@ -20,6 +21,7 @@ namespace Tai.Models.ProductModels
         public string ProductDetail { get; set; }
         public int ProductQuantity { get; set; }
         public double ProductPrice { get; set; }
+        public Category Category { get; set; }
         [Range(0, 100)]
         public double SaleOff { get; set; }
         public double Price => ProductPrice * (1 - SaleOff / 100);

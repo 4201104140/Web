@@ -1,36 +1,64 @@
 ﻿@model IEnumerable<Tai.DataModels.Category>
 
-
-<nav class="main-navbar">
-    <div class="container">
-        <!-- menu -->
-        <ul class="main-menu">
-            <li><a href="/">Home</a></li>
-            @foreach (var category in Model) {
-                if (category.CategoryParentId == null)
+@if (ViewBag.IsHor)
+{
+    <nav class="main-navbar">
+        <div class="container">
+            <!-- menu -->
+            <ul class="main-menu">
+                <li><a href="/">Home</a></li>
+                @foreach (var category in Model)
                 {
-                    <li>
-                        <a href="#">@category.CategoryName</a>
-                        <ul class="sub-menu">
-                            @foreach (var child in category.Categories)
-                            {
-                                <li><a href="#">@child.CategoryName</a></li>
-                            }
-                        </ul>
-                    </li>
+                    if (category.CategoryParentId == null)
+                    {
+                        <li>
+                            <a href="#">@category.CategoryName</a>
+                            <ul class="sub-menu">
+                                @foreach (var child in category.Categories)
+                                {
+                                    <li><a href="/@child.CategoryName.ToUrlFriendly()">@child.CategoryName</a></li>
+                                }
+                            </ul>
+                        </li>
+                    }
                 }
-            }
-            <li>
-                <a href="#">Pages</a>
-                <ul class="sub-menu">
-                    <li><a href="./product.html">Product Page</a></li>
-                    <li><a href="./category.html">Category Page</a></li>
-                    <li><a href="./cart.html">Cart Page</a></li>
-                    <li><a href="./checkout.html">Checkout Page</a></li>
-                    <li><a href="./contact.html">Contact Page</a></li>
-                </ul>
-            </li>
-            <li><a href="#">Blog</a></li>
-        </ul>
+                <li>
+                    <a href="#">Pages</a>
+                    <ul class="sub-menu">
+                        <li><a href="./product.html">Product Page</a></li>
+                        <li><a href="./category.html">Category Page</a></li>
+                        <li><a href="./cart.html">Cart Page</a></li>
+                        <li><a href="./checkout.html">Checkout Page</a></li>
+                        <li><a href="./contact.html">Contact Page</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">Blog</a></li>
+            </ul>
+        </div>
+    </nav>
+}
+else
+{
+    <div class="col-lg-3 order-2 order-lg-1">
+        <div class="filter-widget">
+            <h2 class="fw-title">Categories</h2>
+            <ul class="category-menu">
+                @foreach (var category in Model)
+                {
+                    if (category.CategoryParentId == null)
+                    {
+                        <li>
+                            <a href="#">@category.CategoryName</a>
+                            <ul class="sub-menu">
+                                @foreach (var child in category.Categories)
+                                {
+                                    <li><a href="/@child.CategoryName.ToUrlFriendly()">@child.CategoryName<span>@category.Products?.Count()</span></a></li>
+                                }
+                            </ul>
+                        </li>
+                    }
+                }
+            </ul>
+        </div>
     </div>
-</nav>
+}

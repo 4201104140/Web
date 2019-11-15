@@ -48,11 +48,12 @@ namespace Tai.Migrations
                 name: "Product",
                 columns: table => new
                 {
-                    ProductId = table.Column<string>(maxLength: 68, nullable: false),
+                    ProductId = table.Column<string>(maxLength: 6, nullable: false),
                     ProductName = table.Column<string>(maxLength: 250, nullable: false),
                     Images = table.Column<string>(maxLength: 100, nullable: true),
                     ProductDescription = table.Column<string>(nullable: true),
                     ProductDetail = table.Column<string>(nullable: true),
+                    Barcode = table.Column<string>(nullable: true),
                     ProductQuantity = table.Column<int>(nullable: false),
                     ProductPrice = table.Column<double>(nullable: false),
                     SaleOff = table.Column<double>(nullable: false),

@@ -10,7 +10,7 @@ using Tai.DataModels;
 namespace Tai.Migrations
 {
     [DbContext(typeof(MyDbContext))]
-    [Migration("20191111041333_init")]
+    [Migration("20191114082835_init")]
     partial class init
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -99,7 +99,9 @@ namespace Tai.Migrations
                 {
                     b.Property<string>("ProductId")
                         .ValueGeneratedOnAdd()
-                        .HasMaxLength(68);
+                        .HasMaxLength(6);
+
+                    b.Property<string>("Barcode");
 
                     b.Property<string>("CategoryId")
                         .HasMaxLength(6);

@@ -9,7 +9,7 @@ namespace Repository
 {
     public class SaleDeleteByIdRepository : Connection
     {
-        public int SaleId { get; set; }
+        public string SaleId { get; set; }
         public bool Execute()
         {
             using(var cmd = new Query())

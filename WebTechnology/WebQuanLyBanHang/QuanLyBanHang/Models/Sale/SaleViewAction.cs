@@ -7,7 +7,7 @@ namespace QuanLyBanHang.Models
 {
     public class SaleViewAction
     {
-        public int SaleId { get; set; }
+        public string SaleId { get; set; }
         public List<dynamic> Execute()
         {
             using(var cmd = new SaleItemGetByIdRepository())

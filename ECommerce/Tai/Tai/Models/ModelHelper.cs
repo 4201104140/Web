@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Globalization;
 using System.Linq;
 using System.Text.RegularExpressions;
 using System.Threading.Tasks;
@@ -23,6 +24,12 @@ namespace Tai.Models
             str = Regex.Replace(str, @"\s", "-");
 
             return str;
+        }
+        public static string ToVnC(this double money)
+        {
+            CultureInfo cul = CultureInfo.GetCultureInfo("vi-VN");
+            string a = money.ToString("#,###đ", cul.NumberFormat);
+            return a;
         }
     }
 }

@@ -97,7 +97,9 @@ namespace Tai.Migrations
                 {
                     b.Property<string>("ProductId")
                         .ValueGeneratedOnAdd()
-                        .HasMaxLength(68);
+                        .HasMaxLength(6);
+
+                    b.Property<string>("Barcode");
 
                     b.Property<string>("CategoryId")
                         .HasMaxLength(6);
@@ -118,6 +120,8 @@ namespace Tai.Migrations
                     b.Property<int>("ProductQuantity");
 
                     b.Property<double>("SaleOff");
+
+                    b.Property<DateTime>("SaleOffDate");
 
                     b.HasKey("ProductId");
 

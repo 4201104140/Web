@@ -58,13 +58,13 @@
                                         <td><input type="checkbox" /></td>
                                         <td id="ProductId">@item.ProductId</td>
                                         <td>
-                                            <a href="#" onclick="btnProductNameClick(@item.ProductId);">@item.ProductName</a>
+                                            <a href="#" onclick="btnProductNameClick('@item.ProductId');">@item.ProductName</a>
                                         </td>
-                                        <td>@item.Qty</td>
-                                        <td>@item.Price</td>
+                                        <td>@item.ProductQuantity</td>
+                                        <td>@item.ProductPrice</td>
                                         <td>@item.Total</td>
                                         <td>
-                                            <a title="Xóa" href="#" onclick="btnDelete(@item.SaleItemId);" type="button" class="btn btn-default btn-sm"><span class="fa fa-trash-o"></span></a>
+                                            <a title="Xóa" href="#" onclick="btnDelete('@item.SaleItemId');" type="button" class="btn btn-default btn-sm"><span class="fa fa-trash-o"></span></a>
                                         </td>
                                       </tr>
                                 }

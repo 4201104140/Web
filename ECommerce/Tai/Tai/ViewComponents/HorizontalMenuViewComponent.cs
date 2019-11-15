@@ -14,8 +14,9 @@ namespace Tai.ViewComponents
         {
             _context = context;
         }
-        public async Task<IViewComponentResult> InvokeAsync()
+        public async Task<IViewComponentResult> InvokeAsync(bool isHor = true)
         {
+            ViewBag.IsHor = isHor;
             var categories = _context.Categories.ToList();
             await Task.CompletedTask;
             return View(categories);

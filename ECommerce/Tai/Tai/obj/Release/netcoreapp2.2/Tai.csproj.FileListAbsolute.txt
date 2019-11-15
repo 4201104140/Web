@@ -98,7 +98,6 @@ C:\Users\Hello\Desktop\Web\ECommerce\Tai\Tai\obj\Release\netcoreapp2.2\Razor\Vie
 C:\Users\Hello\Desktop\Web\ECommerce\Tai\Tai\obj\Release\netcoreapp2.2\Razor\Views\Shared\_CookieConsentPartial.cshtml.g.cs
 C:\Users\Hello\Desktop\Web\ECommerce\Tai\Tai\obj\Release\netcoreapp2.2\Razor\Views\Shared\_Layout.cshtml.g.cs
 C:\Users\Hello\Desktop\Web\ECommerce\Tai\Tai\obj\Release\netcoreapp2.2\Razor\Views\Shared\_MyFooter.cshtml.g.cs
-C:\Users\Hello\Desktop\Web\ECommerce\Tai\Tai\obj\Release\netcoreapp2.2\Razor\Views\Shared\_MyHeader.cshtml.g.cs
 C:\Users\Hello\Desktop\Web\ECommerce\Tai\Tai\obj\Release\netcoreapp2.2\Razor\Views\Shared\_ValidationScriptsPartial.cshtml.g.cs
 C:\Users\Hello\Desktop\Web\ECommerce\Tai\Tai\obj\Release\netcoreapp2.2\Razor\Views\_ViewImports.cshtml.g.cs
 C:\Users\Hello\Desktop\Web\ECommerce\Tai\Tai\obj\Release\netcoreapp2.2\Razor\Views\_ViewStart.cshtml.g.cs
@@ -108,3 +107,5 @@ C:\Users\Hello\Desktop\Web\ECommerce\Tai\Tai\obj\Release\netcoreapp2.2\Tai.Views
 C:\Users\Hello\Desktop\Web\ECommerce\Tai\Tai\obj\Release\netcoreapp2.2\Tai.dll
 C:\Users\Hello\Desktop\Web\ECommerce\Tai\Tai\obj\Release\netcoreapp2.2\Tai.pdb
 C:\Users\Hello\Desktop\Web\ECommerce\Tai\Tai\obj\Release\netcoreapp2.2\Tai.csproj.CopyComplete
+C:\Users\Hello\Desktop\Web\ECommerce\Tai\Tai\obj\Release\netcoreapp2.2\Razor\Views\Shared\_Footer.cshtml.g.cs
+C:\Users\Hello\Desktop\Web\ECommerce\Tai\Tai\obj\Release\netcoreapp2.2\Razor\Views\Shared\_HeaderTop.cshtml.g.cs

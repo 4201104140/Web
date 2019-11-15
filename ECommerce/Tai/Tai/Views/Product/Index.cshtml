@@ -2,60 +2,49 @@
 @{
     ViewData["Title"] = "Sản phẩm";
 }
-
-<div class="container">
-    <div class="shop-inner">
-        <div class="page-title">
-            <h2>
-            </h2>
-        </div>
-        <div class="toolbar">
-            <div class="view-mode">
-                <ul>
-                    <li class="active"> <a href="shop_grid.html"> <i class="fa fa-th-large"></i> </a> </li>
-                    <li> <a href="shop_list.html"> <i class="fa fa-th-list"></i> </a> </li>
-                </ul>
-            </div>
-            <div class="sorter">
-                <div class="short-by">
-                    <label>Sort By:</label>
-                    <select>
-                        <option selected="selected">Position</option>
-                        <option>Name</option>
-                        <option>Price</option>
-                        <option>Size</option>
-                    </select>
-                </div>
-                <div class="short-by page">
-                    <label>Show:</label>
-                    <select>
-                        <option selected="selected">18</option>
-                        <option>20</option>
-                        <option>25</option>
-                        <option>30</option>
-                    </select>
-                </div>
-            </div>
-        </div>
-        <div class="product-grid-area">
-            <ul class="products-grid">
-                @foreach (var product in Model)
-                {
-                    @await Component.InvokeAsync("Item", product)
-                }
-
-            </ul>
-        </div>
-        <div class="pagination-area">
-            <ul>
-                <li><a class="active" href="#">1</a></li>
-                <li><a href="#">2</a></li>
-                <li><a href="#">3</a></li>
-                <li><a href="#"><i class="fa fa-angle-right"></i></a></li>
-            </ul>
+<!-- Page info -->
+<div class="page-top-info">
+    <div class="container">
+        <h4>@Model.FirstOrDefault().Category?.CategoryName</h4>
+        <div class="site-pagination">
+            <a href="/">Home</a> /
         </div>
     </div>
 </div>
+<!-- Page info end -->
+<!-- Category section -->
+<section class="category-section spad">
+    <div class="container">
+        <div class="row">
+            @await Component.InvokeAsync("HorizontalMenu", new { isHor = false })
+            <div class="col-lg-9  order-1 order-lg-2 mb-5 mb-lg-0">
+                <div class="row">
+                    @foreach (var item in Model)
+                    {
+                        <div class="col-lg-4 col-sm-6">
+                            <div class="product-item">
+                                <div class="pi-pic">
+                                    @*<div class="tag-sale">ON SALE</div>*@
+                                    <img src="~/Hinh/product/@item.Images" alt="">
+                                    <div class="pi-links">
+                                        <a href="#" class="add-card"><i class="flaticon-bag"></i><span>ADD TO CART</span></a>
+                                        <a href="#" class="wishlist-btn"><i class="flaticon-heart"></i></a>
+                                    </div>
+                                </div>
+                                <div class="pi-text">
+                                    <h6>@((item.ProductPrice * (1 - item.SaleOff / 100)).ToVnC())</h6>
+                                    <p>@item.ProductName</p>
+                                </div>
+                            </div>
+                        </div>
+                    }
+
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- Category section end -->
 
 @section Scripts{
     <script type="text/javascript">
@@ -64,7 +53,7 @@
                 "Product": {
                     "ProductId": product
                 },
-                "Quantity":qty
+                "Quantity": qty
             };
             var xhttp = new XMLHttpRequest();
             xhttp.onreadystatechange = function () {
