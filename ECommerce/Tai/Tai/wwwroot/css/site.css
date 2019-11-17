@@ -1,56 +1,119 @@
-﻿/* Please see documentation at https://docs.microsoft.com/aspnet/core/client-side/bundling-and-minification
-for details on configuring this project to bundle and minify static web assets. */
+﻿@import url(https://fonts.googleapis.com/css?family=Lato:300,400,700);
 
-a.navbar-brand {
-  white-space: normal;
-  text-align: center;
-  word-break: break-all;
+
+*, *:before, *:after {
+    box-sizing: border-box;
 }
 
-/* Sticky footer styles
--------------------------------------------------- */
-html {
-  font-size: 14px;
+
+.lighter-text {
+    color: #ABB0BE;
 }
-@media (min-width: 768px) {
-  html {
+
+.main-color-text {
+    color: #6394F8;
+}
+
+
+.badge {
+    background-color: #6394F8;
+    border-radius: 10px;
+    color: white;
+    display: inline-block;
+    font-size: 12px;
+    line-height: 1;
+    padding: 3px 7px;
+    text-align: center;
+    vertical-align: middle;
+    white-space: nowrap;
+}
+
+.shopping-cart {
+    margin: 20px 0;
+    float: right;
+    background: white;
+    width: 320px;
+    position: relative;
+    border-radius: 3px;
+    padding: 20px;
+}
+
+    .shopping-cart .shopping-cart-header {
+        border-bottom: 1px solid #E8E8E8;
+        padding-bottom: 15px;
+    }
+
+        .shopping-cart .shopping-cart-header .shopping-cart-total {
+            float: right;
+        }
+
+    .shopping-cart .shopping-cart-items {
+        padding-top: 20px;
+    }
+
+        .shopping-cart .shopping-cart-items li {
+            margin-bottom: 18px;
+        }
+
+        .shopping-cart .shopping-cart-items img {
+            float: left;
+            margin-right: 12px;
+        }
+
+        .shopping-cart .shopping-cart-items .item-name {
+            display: block;
+            padding-top: 10px;
+            font-size: 16px;
+        }
+
+        .shopping-cart .shopping-cart-items .item-price {
+            color: #6394F8;
+            margin-right: 8px;
+        }
+
+        .shopping-cart .shopping-cart-items .item-quantity {
+            color: #ABB0BE;
+        }
+
+    .shopping-cart:after {
+        bottom: 100%;
+        left: 89%;
+        border: solid transparent;
+        content: " ";
+        height: 0;
+        width: 0;
+        position: absolute;
+        pointer-events: none;
+        border-bottom-color: white;
+        border-width: 8px;
+        margin-left: -8px;
+    }
+
+.cart-icon {
+    color: #515783;
+    font-size: 24px;
+    margin-right: 7px;
+    float: left;
+}
+
+.button {
+    background: #6394F8;
+    color: white;
+    text-align: center;
+    padding: 12px;
+    text-decoration: none;
+    display: block;
+    border-radius: 3px;
     font-size: 16px;
-  }
+    margin: 25px 0 15px 0;
 }
 
-.border-top {
-  border-top: 1px solid #e5e5e5;
-}
-.border-bottom {
-  border-bottom: 1px solid #e5e5e5;
-}
+    .button:hover {
+        background: #729ef9;
+    }
 
-.box-shadow {
-  box-shadow: 0 .25rem .75rem rgba(0, 0, 0, .05);
-}
-
-button.accept-policy {
-  font-size: 1rem;
-  line-height: inherit;
-}
-
-/* Sticky footer styles
--------------------------------------------------- */
-html {
-  position: relative;
-  min-height: 100%;
-}
-
-body {
-  /* Margin bottom by footer height */
-  margin-bottom: 60px;
-}
-.footer {
-  position: absolute;
-  bottom: 0;
-  width: 100%;
-  white-space: nowrap;
-  /* Set the fixed height of the footer here */
-  height: 60px;
-  line-height: 60px; /* Vertically center the text there */
+.clearfix:after {
+    content: "";
+    display: table;
+    clear: both;
 }

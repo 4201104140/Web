@@ -1,14 +1,14 @@
-﻿@*@{ 
+﻿@{ 
     List<CartItem> cartItems = Context.Session.GetObject<List<CartItem>>("Cart");
     var count = 0;
     var sumPrice = 0.0;
-    if (cartItems.Count != 0)
+    if (cartItems?.Count>0)
     {
         count = cartItems.Count;
         sumPrice = cartItems.Sum(item => item.Price);
     }
 
-}*@
+}
 <div class="header-top">
     <div class="container">
         <div class="row">
@@ -33,10 +33,41 @@
                     <div class="up-item">
                         <div class="shopping-card">
                             <i class="flaticon-bag"></i>
-                            <span>0</span>
+                            <span>@count</span>
                         </div>
-                        <a href="#">Shopping Cart</a>
+                        <a href="#" id="cart">Shopping Cart</a>
                     </div>
+                    <div class="container" style="z-index:20;position:absolute;">
+                        <div class="shopping-cart" style="display:none">
+                            <div class="shopping-cart-header">
+                                <i class="fa fa-shopping-cart cart-icon"></i><span class="badge">@count</span>
+                                <div class="shopping-cart-total">
+                                    <span class="lighter-text">Total:</span>
+                                    <span class="main-color-text">@sumPrice</span>
+                                </div>
+                            </div> <!--end shopping-cart-header -->
+
+                            <ul class="shopping-cart-items">
+                                @if (cartItems?.Count > 0)
+                                {
+                                    @foreach (var item in cartItems)
+                                    {
+                                        <li class="clearfix">
+                                            <img src="~/Hinh/product/@item.Product.Images" alt="item1" width="50" height="50"/>
+                                            <span class="item-name">@item.Product.ProductName</span>
+                                            <span class="item-price">@item.Price</span>
+                                            <span class="item-quantity">Quantity: @item.Quantity</span>
+                                        </li>
+                                    }
+                                }
+
+
+
+                            </ul>
+
+                            <a href="#" class="button">Checkout</a>
+                        </div> <!--end shopping-cart -->
+                    </div> <!--end container -->
                 </div>
             </div>
         </div>
