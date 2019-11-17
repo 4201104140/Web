@@ -30,7 +30,9 @@ namespace Tai.Controllers
         public IActionResult Detail(string productName)
         {
             var product = _dbContext.Products.Where(p => p.ProductName.ToUrlFriendly() == productName).SingleOrDefault();
+            var productRelates = _dbContext.Products.Where(p => p.CategoryId == product.CategoryId).ToList();
             var productDetail = _mapper.Map<ProductDetail>(product);
+            productDetail.ProductRelates = productRelates;
             return View(productDetail);
         }
         
