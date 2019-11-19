@@ -7,7 +7,7 @@
         count = cartItems.Count;
         sumPrice = cartItems.Sum(item => item.Price);
     }
-
+    var user = Context.Session.GetObject<Customer>("user");
 }
 <div class="header-top">
     <div class="container">
@@ -28,7 +28,14 @@
                 <div class="user-panel">
                     <div class="up-item">
                         <i class="flaticon-profile"></i>
-                        <a href="#">Sign</a> In or <a href="#">Create Account</a>
+                        @if (user != null)
+                        {
+                            <a href="#">Hi @user.CustomerName</a>
+                        }
+                        else
+                        {
+                            <a asp-action="SignIn" asp-controller="Login" asp-route-returnUrl="@Context.Request.Path">Sign In</a> <b>or </b><a href="#">Create Account</a>
+                        }
                     </div>
                     <div class="up-item">
                         <div class="shopping-card">
@@ -65,7 +72,7 @@
 
                             </ul>
 
-                            <a href="#" class="button">Checkout</a>
+                            <a class="button" asp-action="CheckOut" asp-controller="Cart">Checkout</a>
                         </div> <!--end shopping-cart -->
                     </div> <!--end container -->
                 </div>

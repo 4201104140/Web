@@ -19,17 +19,17 @@ namespace Tai.Models.CaptureIntent
                 items.Add(new Item
                 {
                     Name = carts[i].Product.ProductName,
-                    Description = "Tai",
-                    Sku = "sku"+(i+1).ToString(),
+                    Description = carts[i].Product.ProductDescription.Split(".")[0],
+                    Sku = "sku"+ carts[i].Product.Barcode,
                     UnitAmount = new Money
                     {
                         CurrencyCode = "USD",
-                        Value = carts[i].Product.Price.ToString()
+                        Value = (carts[i].Product.Price/23000).ToUSD()
                     },
                     Tax = new Money
                     {
                         CurrencyCode = "USD",
-                        Value = (carts[i].Product.Price*0.1).ToString()
+                        Value = (carts[i].Product.Price/23000 * 0.1).ToUSD()
                     },
                     Quantity = carts[i].Quantity.ToString(),
                     Category = "PHYSICAL_GOODS"
@@ -58,33 +58,33 @@ namespace Tai.Models.CaptureIntent
                         AmountWithBreakdown = new AmountWithBreakdown
                         {
                             CurrencyCode = "USD",
-                            Value = (sumPrice*1.1+18.0).ToString(),
+                            Value = (sumPrice/23000*1.1+0.0).ToUSD(),
                             AmountBreakdown = new AmountBreakdown
                             {
                                 ItemTotal = new Money
                                 {
                                     CurrencyCode = "USD",
-                                    Value = sumPrice.ToString()
+                                    Value = (sumPrice/23000).ToUSD()
                                 },
                                 Shipping = new Money
                                 {
                                     CurrencyCode = "USD",
-                                    Value = "18.00"
+                                    Value = "0.00"
                                 },
                                 Handling = new Money
                                 {
                                     CurrencyCode = "USD",
-                                    Value = "9.00"
+                                    Value = "0.00"
                                 },
                                 TaxTotal = new Money
                                 {
                                     CurrencyCode = "USD",
-                                    Value = (sumPrice*0.1).ToString()
+                                    Value = (sumPrice/23000*0.1).ToUSD()
                                 },
                                 ShippingDiscount = new Money
                                 {
                                     CurrencyCode = "USD",
-                                    Value = "9.00"
+                                    Value = "0.00"
                                 }
                             }
                         },
@@ -93,7 +93,7 @@ namespace Tai.Models.CaptureIntent
                         {
                             Name = new Name
                             {
-                                FullName = "John Doe"
+                                FullName = "Nhóm 13"
                             },
                             AddressPortable = new AddressPortable
                             {

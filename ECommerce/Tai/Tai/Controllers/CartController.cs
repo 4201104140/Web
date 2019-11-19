@@ -60,5 +60,14 @@ namespace Tai.Controllers
             
             return RedirectToAction("Index", "Home");
         }
+
+        public IActionResult CheckOut()
+        {
+            if (HttpContext.Session.GetObject<Customer>("user") == null)
+            {
+                return RedirectToAction("SignIn", "Login", new { returnUrl = "/Cart/CheckOut" });
+            }
+            return View();
+        }
     }
 }

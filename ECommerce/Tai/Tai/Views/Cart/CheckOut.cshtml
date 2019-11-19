@@ -1,0 +1,77 @@
+﻿
+@{
+    List<CartItem> cartItems = Context.Session.GetObject<List<CartItem>>("Cart");
+    var count = 0;
+    var sumPrice = 0.0;
+    if (cartItems?.Count > 0)
+    {
+        count = cartItems.Count;
+        sumPrice = cartItems.Sum(item => item.Price);
+    }
+    var user = Context.Session.GetObject<Customer>("user");
+}
+@{
+    ViewData["Title"] = "Index";
+}
+<!-- Page info -->
+<div class="page-top-info">
+    <div class="container">
+        <h4>Your cart</h4>
+        <div class="site-pagination">
+            <a href="">Home</a> /
+            <a href="">Your cart</a>
+        </div>
+    </div>
+</div>
+<!-- Page info end -->
+<!-- checkout section  -->
+<section class="checkout-section spad">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 order-2 order-lg-1">
+                <form action="/thanh-toan/paypal" class="checkout-form" autocomplete="off" method="post">
+                    <div class="cf-title">Địa chỉ.</div>
+                    <div class="row">
+                        <div class="col-md-7">
+                            <p>*Billing Information</p>
+                        </div>
+                    </div>
+                    <div class="row address-inputs">
+                        <div class="col-md-12">
+                            <input type="text" placeholder="Address">
+                            <input type="text" placeholder="Address line 2">
+                            <input type="text" placeholder="Country">
+                            <input type="text" placeholder="Phone no.">
+                        </div>
+                    </div>
+                    <ul class="payment-list">
+                        <li>Paypal<a href="#"><img src="~/divisima/img/paypal.png" alt=""></a></li>
+                    </ul>
+                    <input type="submit" class="site-btn submit-order-btn" value="Đặt hàng"/>
+                </form>
+            </div>
+            <div class="col-lg-4 order-1 order-lg-2">
+                <div class="checkout-cart">
+                    <h3>Đơn hàng</h3>
+                    <ul class="product-list">
+                        @foreach (var item in cartItems)
+                        {
+                            <li>
+                                <div class="pl-thumb"><img src="~/Hinh/product/@item.Product.Images" alt=""></div>
+                                <h6>@item.Product.ProductName</h6>
+                                <p>@item.Price.ToVnC() x @item.Quantity</p>
+                            </li>
+                        }
+
+                    </ul>
+                    <ul class="price-list">
+                        <li>Shipping<span>free</span></li>
+                        <li>Thuế VAT<span>10%</span></li>
+                        <li>Tổng giá<span>(@sumPrice)*1.1.ToVnC()</span></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- checkout section end -->

@@ -31,5 +31,10 @@ namespace Tai.Models
             string a = money.ToString("#,###đ", cul.NumberFormat);
             return a;
         }
+
+        public static string ToUSD(this double money)
+        {
+            return money.ToString("#.##");
+        }
     }
 }

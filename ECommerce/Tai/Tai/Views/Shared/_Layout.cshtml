@@ -33,6 +33,9 @@
     <div>
         @RenderBody()
     </div>  
+    <div>
+        @await Html.PartialAsync("_TalkTo")
+    </div>
     <section class="footer-section">
         @await Html.PartialAsync("_Footer")
     </section>
