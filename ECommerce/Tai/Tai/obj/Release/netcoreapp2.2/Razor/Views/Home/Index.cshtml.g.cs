@@ -23,13 +23,18 @@ using Tai.Models.CartModels;
 
 #line default
 #line hidden
+#line 4 "C:\Users\Hello\Desktop\Web\ECommerce\Tai\Tai\Views\_ViewImports.cshtml"
+using Tai.DataModels;
+
+#line default
+#line hidden
 #line 2 "C:\Users\Hello\Desktop\Web\ECommerce\Tai\Tai\Views\Home\Index.cshtml"
 using Tai.Models;
 
 #line default
 #line hidden
     [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"d4ed3c5383e813ee8f43495ae27905a8620a639b", @"/Views/Home/Index.cshtml")]
-    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"5f9b7745c2e643501d3439bff4cb481f55e89933", @"/Views/_ViewImports.cshtml")]
+    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"3f30cbd38c6f989b7773fdb519eef7f8d551d4ed", @"/Views/_ViewImports.cshtml")]
     public class Views_Home_Index : global::Microsoft.AspNetCore.Mvc.Razor.RazorPage<Tai.Models.HomeModels.IndexModel>
     {
         #pragma warning disable 1998

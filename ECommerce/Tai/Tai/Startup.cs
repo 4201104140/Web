@@ -44,6 +44,9 @@ namespace Tai
                 opt.IdleTimeout = TimeSpan.FromMinutes(5);
                 opt.Cookie.IsEssential = true;
             });
+
+            var appSettingsSection = Configuration.GetSection("MyKey");
+            services.Configure<Mykey>(appSettingsSection);  
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

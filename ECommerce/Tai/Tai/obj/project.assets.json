@@ -4779,6 +4779,21 @@
         "runtime": {
           "lib/netstandard1.3/System.Xml.XPath.XDocument.dll": {}
         }
+      },
+      "Twilio/5.35.1": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.IdentityModel.Tokens": "5.3.0",
+          "Newtonsoft.Json": "11.0.2",
+          "System.Collections.Specialized": "4.3.0",
+          "System.IdentityModel.Tokens.Jwt": "5.3.0"
+        },
+        "compile": {
+          "lib/netstandard2.0/Twilio.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/Twilio.dll": {}
+        }
       }
     }
   },
@@ -13059,6 +13074,25 @@
         "system.xml.xpath.xdocument.4.3.0.nupkg.sha512",
         "system.xml.xpath.xdocument.nuspec"
       ]
+    },
+    "Twilio/5.35.1": {
+      "sha512": "i1pFSzjoYYfXfGN5a3+e8ZGfb9jGZ4UVZRkLv0rSmkWg7RlOPT0UbNIhfraLGgyHZ0I/qavGCS9DrTinhMeQVg==",
+      "type": "package",
+      "path": "twilio/5.35.1",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/net35/Twilio.dll",
+        "lib/net35/Twilio.xml",
+        "lib/net451/Twilio.dll",
+        "lib/net451/Twilio.xml",
+        "lib/netstandard1.4/Twilio.dll",
+        "lib/netstandard1.4/Twilio.xml",
+        "lib/netstandard2.0/Twilio.dll",
+        "lib/netstandard2.0/Twilio.xml",
+        "twilio.5.35.1.nupkg.sha512",
+        "twilio.nuspec"
+      ]
     }
   },
   "projectFileDependencyGroups": {
@@ -13070,7 +13104,8 @@
       "Microsoft.NETCore.App >= 2.2.0",
       "Microsoft.VisualStudio.Web.CodeGeneration.Design >= 2.2.4",
       "PayPal >= 2.0.0-rc2",
-      "PayPalCheckoutSdk >= 1.0.2"
+      "PayPalCheckoutSdk >= 1.0.2",
+      "Twilio >= 5.35.1"
     ]
   },
   "packageFolders": {
@@ -13153,6 +13188,10 @@
           "PayPalCheckoutSdk": {
             "target": "Package",
             "version": "[1.0.2, )"
+          },
+          "Twilio": {
+            "target": "Package",
+            "version": "[5.35.1, )"
           }
         },
         "imports": [
@@ -13165,7 +13204,7 @@
         ],
         "assetTargetFallback": true,
         "warn": true,
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.100-preview1-014459\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.100-preview3-014645\\RuntimeIdentifierGraph.json"
       }
     }
   }

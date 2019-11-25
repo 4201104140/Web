@@ -3,8 +3,9 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content=" Nhom 13 | Eshop ">
+    <meta name="description" content="Shop 13 - Thiên đường bánh ngọt. Còn gì tuyệt vời hơn khi bạn ghé thăm shop và chọn cho mình một gói bánh bổ dưỡng, thơm ngon. Các sp kẹo ngọt và bánh là một sự kết hợp hoàn hảo của nghệ thuật làm bánh và tay nghề khéo léo sẽ mang đến cho bạn một hương vị khó quên.">
     <meta name="keywords" content="clothes, fashion, shop">
+    <meta name="author" content="Nhóm 13">
     <title>@ViewData["Title"]</title>
     @RenderSection("metaSocial", required: false)
     <!-- Favicon -->
@@ -20,6 +21,7 @@
     <link rel="stylesheet" href="~/divisima/css/style.css" />
     <link href="~/css/site.css" rel="stylesheet" />
 
+    @await Html.PartialAsync("_GoogleAnalytics")
 </head>
 <body>
     <!-- Page Preloder -->
@@ -36,6 +38,7 @@
     <div>
         @await Html.PartialAsync("_TalkTo")
     </div>
+    
     <section class="footer-section">
         @await Html.PartialAsync("_Footer")
     </section>

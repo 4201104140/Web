@@ -35,6 +35,10 @@ namespace Tai.Controllers
             productDetail.ProductRelates = productRelates;
             return View(productDetail);
         }
-        
+        [HttpPost]
+        public IActionResult Test([FromBody]string search,[FromBody] string name)
+        {
+            return Ok();
+        }
     }
 }

@@ -12,8 +12,10 @@ namespace Tai.DataModels
     {
         [Key]
         public string DetailId { get; set; }
-        [MaxLength(100)]
-        public string ProductName { get; set; }
+        [MaxLength(6)]
+        public string ProductId { get; set; }
+        [ForeignKey("ProductId")]
+        public Product Product { get; set; }
         public double ProductPrice { get; set; }
         public int ProductQuantity { get; set; }
         public double ProductTax { get; set; }

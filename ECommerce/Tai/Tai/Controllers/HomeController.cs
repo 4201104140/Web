@@ -13,6 +13,7 @@ namespace Tai.Controllers
 {
     public class HomeController : Controller
     {
+        //nqttoqv1WYQyDNY4aW7Nkw8tpifumkia2f1BoNaoLCh68g3GswRnZ5xbXlDY
         private readonly MyDbContext _context;
         public HomeController(MyDbContext context)
         {

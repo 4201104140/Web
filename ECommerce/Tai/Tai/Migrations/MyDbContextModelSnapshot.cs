@@ -73,12 +73,11 @@ namespace Tai.Migrations
                         .ValueGeneratedOnAdd()
                         .HasMaxLength(30);
 
+                    b.Property<string>("CustomerId");
+
                     b.Property<DateTime>("OrderDate");
 
                     b.Property<string>("OrderEmail")
-                        .HasMaxLength(100);
-
-                    b.Property<string>("OrderName")
                         .HasMaxLength(100);
 
                     b.Property<string>("OrderStatus")
@@ -87,6 +86,8 @@ namespace Tai.Migrations
                     b.Property<double>("PriceTotal");
 
                     b.HasKey("OrderId");
+
+                    b.HasIndex("CustomerId");
 
                     b.ToTable("Order");
                 });
@@ -99,8 +100,8 @@ namespace Tai.Migrations
                     b.Property<string>("OrderId")
                         .HasMaxLength(30);
 
-                    b.Property<string>("ProductName")
-                        .HasMaxLength(100);
+                    b.Property<string>("ProductId")
+                        .HasMaxLength(6);
 
                     b.Property<double>("ProductPrice");
 
@@ -111,6 +112,8 @@ namespace Tai.Migrations
                     b.HasKey("DetailId");
 
                     b.HasIndex("OrderId");
+
+                    b.HasIndex("ProductId");
 
                     b.ToTable("OrderDetail");
                 });
@@ -159,11 +162,22 @@ namespace Tai.Migrations
                         .HasForeignKey("CategoryParentId");
                 });
 
+            modelBuilder.Entity("Tai.DataModels.Order", b =>
+                {
+                    b.HasOne("Tai.DataModels.Customer", "Customer")
+                        .WithMany()
+                        .HasForeignKey("CustomerId");
+                });
+
             modelBuilder.Entity("Tai.DataModels.OrderDetail", b =>
                 {
                     b.HasOne("Tai.DataModels.Order", "Order")
                         .WithMany("OrderDetails")
                         .HasForeignKey("OrderId");
+
+                    b.HasOne("Tai.DataModels.Product", "Product")
+                        .WithMany()
+                        .HasForeignKey("ProductId");
                 });
 
             modelBuilder.Entity("Tai.DataModels.Product", b =>

@@ -18,8 +18,9 @@ namespace Tai.DataModels
         public string OrderStatus { get; set; }
         [MaxLength(100)]
         public string OrderEmail { get; set; }
-        [MaxLength(100)]
-        public string OrderName { get; set; }
+        public string CustomerId { get; set; }
+        [ForeignKey("CustomerId")]
+        public Customer Customer { get; set; }
         public double PriceTotal { get; set; }
         public IEnumerable<OrderDetail> OrderDetails { get; set; }
     }

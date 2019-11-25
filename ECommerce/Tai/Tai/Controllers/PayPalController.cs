@@ -50,9 +50,9 @@ namespace Tai.Controllers
             //AmountWithBreakdown amount = createOrderResult.PurchaseUnits[0].AmountWithBreakdown;
             var authorizeOrderResponse = AuthorizeOrderPayPal.AuthorizeOrder(token).Result;
             var authorizeOrderResult = authorizeOrderResponse.Result<Order>();
-            //var authorizationId = authorizeOrderResult.PurchaseUnits[0].Payments.Authorizations[0].Id;
-            //AmountWithBreakdown authorixedAmount = authorizeOrderResult.PurchaseUnits[0].AmountWithBreakdown;
-            //var captureOrderResponse = CaptureOrderPayPal.CaptureOrder(authorizationId).Result;
+            var authorizationId = authorizeOrderResult.PurchaseUnits[0].Payments.Authorizations[0].Id;
+            AmountWithBreakdown authorixedAmount = authorizeOrderResult.PurchaseUnits[0].AmountWithBreakdown;
+            var captureOrderResponse = CaptureOrderPayPal.CaptureOrder(authorizationId).Result;
             //captureOrderResult = captureOrderResponse.Result<Capture>();
             return View();
         }

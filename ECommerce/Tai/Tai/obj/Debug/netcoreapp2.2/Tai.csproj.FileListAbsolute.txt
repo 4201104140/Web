@@ -82,7 +82,6 @@ C:\Users\Hello\Desktop\Web\ECommerce\Tai\Tai\bin\Debug\netcoreapp2.2\Tai.dll
 C:\Users\Hello\Desktop\Web\ECommerce\Tai\Tai\bin\Debug\netcoreapp2.2\Tai.pdb
 C:\Users\Hello\Desktop\Web\ECommerce\Tai\Tai\bin\Debug\netcoreapp2.2\Tai.Views.dll
 C:\Users\Hello\Desktop\Web\ECommerce\Tai\Tai\bin\Debug\netcoreapp2.2\Tai.Views.pdb
-C:\Users\Hello\Desktop\Web\ECommerce\Tai\Tai\obj\Debug\netcoreapp2.2\Tai.csprojAssemblyReference.cache
 C:\Users\Hello\Desktop\Web\ECommerce\Tai\Tai\obj\Debug\netcoreapp2.2\Tai.RazorAssemblyInfo.cache
 C:\Users\Hello\Desktop\Web\ECommerce\Tai\Tai\obj\Debug\netcoreapp2.2\Tai.RazorAssemblyInfo.cs
 C:\Users\Hello\Desktop\Web\ECommerce\Tai\Tai\obj\Debug\netcoreapp2.2\Tai.AssemblyInfoInputs.cache
@@ -116,3 +115,5 @@ C:\Users\Hello\Desktop\Web\ECommerce\Tai\Tai\obj\Debug\netcoreapp2.2\Razor\Views
 C:\Users\Hello\Desktop\Web\ECommerce\Tai\Tai\obj\Debug\netcoreapp2.2\Razor\Views\Shared\_TalkTo.cshtml.g.cs
 C:\Users\Hello\Desktop\Web\ECommerce\Tai\Tai\obj\Debug\netcoreapp2.2\Razor\Views\Cart\CheckOut.cshtml.g.cs
 C:\Users\Hello\Desktop\Web\ECommerce\Tai\Tai\obj\Debug\netcoreapp2.2\Razor\Views\Login\SignIn.cshtml.g.cs
+C:\Users\Hello\Desktop\Web\ECommerce\Tai\Tai\obj\Debug\netcoreapp2.2\Tai.csprojAssemblyReference.cache
+C:\Users\Hello\Desktop\Web\ECommerce\Tai\Tai\obj\Debug\netcoreapp2.2\Razor\Views\Shared\_GoogleAnalytics.cshtml.g.cs

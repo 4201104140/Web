@@ -15,8 +15,8 @@ namespace Tai.Models.CaptureIntent
         public static PayPalEnvironment environment()
         {
             return new SandboxEnvironment(
-                 "AU197baVlXQbmrQ7G7mkjPyFa1XFm983K4mOZCm-BGskv5E_kjhjIBbcWTRCPqGyUJRCgY_x_DD3H6YX",
-                 "ECaYk6w0kJASKQWfSUcEmWf1TzseAmb2_Zjv_8V7tkg477I9ZXT276VxCHWevYbAM0Z1QOaU4AxLTDS2");
+                 "AUnTZfpeo5Nznz6EkBmQahE28PECPtViHPYh57mVJyZQiPiyCXM-Aftuv1RX36elrm95tYIXG5_3o5aq",
+                 "EFwubsoY31UmXDHypzANrpXA3CUUFpR6vIzWCQuNM2oDcyhbZrFq_X5aFZVE5EPMLxe34US3ALQhGjXl");
         }
 
         /**
