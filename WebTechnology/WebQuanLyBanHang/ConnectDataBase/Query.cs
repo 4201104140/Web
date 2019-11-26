@@ -16,7 +16,7 @@ namespace ConnectDataBase
         {
             try
             {
-                using (var conn = new SqlConnection(ConnectionString))
+                using (var conn = new SqlConnection(ConnectionString2))
                 {
                     DataTable data = new DataTable();
                     var result = new List<dynamic>();
@@ -60,7 +60,7 @@ namespace ConnectDataBase
         {
             try
             {
-                using (var conn = new SqlConnection(ConnectionString))
+                using (var conn = new SqlConnection(ConnectionString2))
                 {
                     DataTable data = new DataTable();
                     var result = new List<dynamic>();

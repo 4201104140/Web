@@ -10,6 +10,7 @@
         });
 
         function exportEx() {
+            debugger;
             var settings = {
                 "async": true,
                 "crossDomain": true,
