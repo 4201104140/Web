@@ -66,8 +66,7 @@ namespace QuanLyBanHang.Controllers
         [HttpPost]
         public ActionResult GetSaleDate(SaleGetByDateAction CommandAction)
         {
-            try
-            {
+
                 var result = CommandAction.Execute();
                 foreach(var item in result)
                 {
@@ -81,12 +80,8 @@ namespace QuanLyBanHang.Controllers
                     item.SaleDate = Convert.ToDateTime(item.SaleDate).ToString("yyyy-MM-dd");
                 }
                 ViewBag.Sale = result;
-                return JsonExpando(Success(result));
-            }
-            catch (Exception ex)
-            {
-                return JsonExpando(Success(false, ex.Message));
-            }
+                return PartialView("Sale/_SaleListPartialView");
+            
         }
         public ActionResult ApiSaleItemGetById(SaleViewAction CommandAction)
         {

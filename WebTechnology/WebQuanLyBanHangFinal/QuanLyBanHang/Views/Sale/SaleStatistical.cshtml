@@ -9,7 +9,7 @@
     <!-- BEGIN Page Title -->
     <div class="page-title">
         <div>
-            <h1><i class="fa fa-bar-chart-o"></i> BIỂU ĐỒ THỐNG KÊ</h1>
+            <h1><i class="fa fa-bar-chart-o"></i> BẢNG THỐNG KÊ</h1>
         </div>
     </div>
     <!-- END Page Title -->
@@ -37,7 +37,7 @@
                         <a data-action="close" href="#"><i class="fa fa-times"></i></a>
                     </div>
                 </div>
-                <div class="box-content">
+                <div class="box-content" id="salelist">
                     <div style="display:inline-block">
                         <input id="date" type='date' class="form-control" />
                     </div>
@@ -54,10 +54,10 @@
                                 <th>Số lượng</th>
                                 <th>Tổng tiền</th>
                                 <th>Trạng thái</th>
-                                
+                                <th>Hành Động</th>
                             </tr>
                         </thead>
-                        <tbody>
+                        <tbody id="salelist">
                         
                         </tbody>
                     </table>
@@ -95,28 +95,42 @@
 <script>
     function search(date) {
         var table = $('#table5');
-        $.post(
-            '/Sale/GetSaleDate',
-            {
+        ////$.post(
+        ////    '/Sale/GetSaleDate',
+        ////    {
+        ////        CommandAction: {
+        ////            SaleDate: date
+        ////        },
+        ////        dataType:'html',
+        ////    },
+        //    function(result) {
+        //        //var tbody = document.getElementById('table5').getElementsByTagName('tbody')[0];
+        //        //tbody.innerHTML = "";
+        //        //console.log(result);
+        //        //if (result.IsSuccess) {
+        //        //    $.each(result.Data, function (k, v) {
+        //        //        tbody.innerHTML += '<tr class="table-flag-blue"><td>' + v.SaleId + '</td><td>' + v.SaleDate + '</td><td>' + v.CustomerName + '</td><td>' + v.EmployeeName + '</td><td>' + v.Qty + '</td><td>' + Format(v.Total) + '</td><td>' + v.StatusShow + '</td></tr>';
+        //        //    });
+        //        //    console.log($('#tr0 #td0').html());
+        //        //}
+        //        //else {
+        //        //    noti(res.Message, 'error');
+        //        //}
+        //    }
+        //);
+        $.ajax({
+            url: "/Sale/GetSaleDate",
+            type: "POST",
+            dataType: 'html',
+            data: {
                 CommandAction: {
                     SaleDate: date
-                }             
+                }
             },
-            function(result) {
-                var tbody = document.getElementById('table5').getElementsByTagName('tbody')[0];
-                tbody.innerHTML = "";
-                console.log(result);
-                if (result.IsSuccess) {
-                    $.each(result.Data, function (k, v) {
-                        tbody.innerHTML += '<tr class="table-flag-blue"><td>' + v.SaleId + '</td><td>' + v.SaleDate + '</td><td>' + v.CustomerName + '</td><td>' + v.EmployeeName + '</td><td>' + v.Qty + '</td><td>' + Format(v.Total) + '</td><td>' + v.StatusShow + '</td></tr>';
-                    });
-                    console.log($('#tr0 #td0').html());
-                }
-                else {
-                    noti(res.Message, 'error');
-                }
+            success: function (data) {
+                $('#salelist').html(data);
             }
-        );
+        });
     }
     function deletesale(id) {
         alert(this.value);

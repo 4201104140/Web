@@ -910,6 +910,7 @@
     <Content Include="Views\Sale\SaleChart.cshtml" />
     <Content Include="Views\Product\PrintBarCode.cshtml" />
     <Content Include="Views\Sale\SaleStatistical.cshtml" />
+    <Content Include="Views\Shared\Sale\_SaleListPartialView.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
