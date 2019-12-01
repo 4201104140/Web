@@ -189,6 +189,7 @@
     <Compile Include="Models\Sale\SaleChangeStatusAction.cs" />
     <Compile Include="Models\Sale\SaleExecuteDeleteByIdAction.cs" />
     <Compile Include="Models\Sale\SaleExecuteSaveAction.cs" />
+    <Compile Include="Models\Sale\SaleGetByStatusAction.cs" />
     <Compile Include="Models\Sale\SaleGetByDateAction.cs" />
     <Compile Include="Models\Sale\SaleGetByIdAction.cs" />
     <Compile Include="Models\Sale\SaleItemExecuteDeleteByIdAction.cs" />
@@ -910,7 +911,9 @@
     <Content Include="Views\Sale\SaleChart.cshtml" />
     <Content Include="Views\Product\PrintBarCode.cshtml" />
     <Content Include="Views\Sale\SaleStatistical.cshtml" />
+    <Content Include="Views\Shared\Sale\_SaleListDataPartialView.cshtml" />
     <Content Include="Views\Shared\Sale\_SaleListPartialView.cshtml" />
+    <Content Include="Views\Shared\Sale\_SaleListDataByStatusPartialView.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

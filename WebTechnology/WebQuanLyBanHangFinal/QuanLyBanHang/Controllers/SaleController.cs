@@ -80,8 +80,26 @@ namespace QuanLyBanHang.Controllers
                     item.SaleDate = Convert.ToDateTime(item.SaleDate).ToString("yyyy-MM-dd");
                 }
                 ViewBag.Sale = result;
-                return PartialView("Sale/_SaleListPartialView");
+                return PartialView("Sale/_SaleListDataPartialView");
             
+        }
+        public ActionResult GetSaleByStatus(SaleGetByStatusAction CommandAction)
+        {
+            var result = CommandAction.Execute();
+            foreach (var item in result)
+            {
+                if (item.Status != 1)
+                {
+                    item.StatusShow = "Chưa xử lí";
+                }
+                else
+                {
+                    item.StatusShow = "Đã hoàn thành";
+                }
+                item.SaleDate = Convert.ToDateTime(item.SaleDate).ToString("yyyy-MM-dd");
+            }
+            ViewBag.Sale = result;
+            return PartialView("Sale/_SaleListDataByStatusPartialView");
         }
         public ActionResult ApiSaleItemGetById(SaleViewAction CommandAction)
         {

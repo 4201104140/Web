@@ -20,3 +20,14 @@ E:\WebQuanLyBanHang\SaleRepository\obj\Debug\SaleRepository.csproj.CoreCompileIn
 E:\WebQuanLyBanHang\SaleRepository\obj\Debug\SaleRepository.csproj.CopyComplete
 E:\WebQuanLyBanHang\SaleRepository\obj\Debug\SaleRepository.dll
 E:\WebQuanLyBanHang\SaleRepository\obj\Debug\SaleRepository.pdb
+E:\Web\WebTechnology\WebQuanLyBanHangFinal\SaleRepository\bin\Debug\SaleRepository.dll
+E:\Web\WebTechnology\WebQuanLyBanHangFinal\SaleRepository\bin\Debug\SaleRepository.pdb
+E:\Web\WebTechnology\WebQuanLyBanHangFinal\SaleRepository\bin\Debug\ConnectDataBase.dll
+E:\Web\WebTechnology\WebQuanLyBanHangFinal\SaleRepository\bin\Debug\Sale.dll
+E:\Web\WebTechnology\WebQuanLyBanHangFinal\SaleRepository\bin\Debug\ConnectDataBase.pdb
+E:\Web\WebTechnology\WebQuanLyBanHangFinal\SaleRepository\bin\Debug\Sale.pdb
+E:\Web\WebTechnology\WebQuanLyBanHangFinal\SaleRepository\obj\Debug\SaleRepository.csprojAssemblyReference.cache
+E:\Web\WebTechnology\WebQuanLyBanHangFinal\SaleRepository\obj\Debug\SaleRepository.csproj.CoreCompileInputs.cache
+E:\Web\WebTechnology\WebQuanLyBanHangFinal\SaleRepository\obj\Debug\SaleRepository.csproj.CopyComplete
+E:\Web\WebTechnology\WebQuanLyBanHangFinal\SaleRepository\obj\Debug\SaleRepository.dll
+E:\Web\WebTechnology\WebQuanLyBanHangFinal\SaleRepository\obj\Debug\SaleRepository.pdb

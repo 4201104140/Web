@@ -47,6 +47,7 @@
     <Compile Include="SaleItem\SaleItemUpdateRepository.cs" />
     <Compile Include="Sale\SaleChangeStatusRepository.cs" />
     <Compile Include="Sale\SaleDeleteByIdRepository.cs" />
+    <Compile Include="Sale\SaleGetByStatusRepository.cs" />
     <Compile Include="Sale\SaleGetByDateRepository.cs" />
     <Compile Include="Sale\SaleGetByIdRepository.cs" />
     <Compile Include="Sale\SaleInsertRepository.cs" />

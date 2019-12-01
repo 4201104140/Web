@@ -28,8 +28,16 @@
     <!-- BEGIN Main Content -->
 
     <div class="row">
-        <div class="col-md-12">
-            <div class="box">
+        <div class="col-md-4">
+            <select id="salelll" onchange="StatisticalChanged(this)" style="margin-bottom: 5px">
+                <option value=""> -- Chọn -- </option>
+                <option value="saledate">Thống kê theo ngày</option>
+                <option value="salestatus"> Thống kê theo trạng thái </option>
+            </select>
+        </div>
+        <div class="col-md-12" id="contentt">
+            <p id="error" style="color: red">Bạn chưa chọn thống kê</p>
+            <div class="box" id="box1">
                 <div class="box-title">
                     <h3><i class="fa fa-bar-chart-o"></i> Thống kê hoá đơn theo ngày</h3>
                     <div class="box-tool">
@@ -42,7 +50,7 @@
                         <input id="date" type='date' class="form-control" />
                     </div>
                     <div style="display:inline-block">
-                        <input type="button" onclick="search(document.getElementById('date').value)" value="Search"/>
+                        <input type="button" onclick="search(document.getElementById('date').value)" value="Search" />
                     </div>
                     <table id="table5" class="table table-advance">
                         <thead>
@@ -57,32 +65,45 @@
                                 <th>Hành Động</th>
                             </tr>
                         </thead>
-                        <tbody id="salelist">
-                        
+                        <tbody>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <div class="box" id="box2">
+                <div class="box-title">
+                    <h3><i class="fa fa-bar-chart-o"></i> Thống kê hoá đơn theo trạng thái</h3>
+                    <div class="box-tool">
+                        <a data-action="collapse" href="#"><i class="fa fa-chevron-up"></i></a>
+                        <a data-action="close" href="#"><i class="fa fa-times"></i></a>
+                    </div>
+                </div>
+                <div class="box-content" id="saleliststatus">
+                    <select id="statusselect" onchange="StatusChanged(this)" style="margin-bottom: 5px">
+                        <option value=""> -- Chọn -- </option>
+                        <option value="complete">Đã hoàn thành</option>
+                        <option value="uncomplete"> Chưa hoàn thành</option>
+                    </select>
+                    <table id="table5" class="table table-advance">
+                        <thead>
+                            <tr>
+                                <th>Mã hoá đơn</th>
+                                <th>Ngày hoá đơn</th>
+                                <th>Khách hàng</th>
+                                <th>Nhân viên bán hàng</th>
+                                <th>Số lượng</th>
+                                <th>Tổng tiền</th>
+                                <th>Trạng thái</th>
+                                <th>Hành Động</th>
+                            </tr>
+                        </thead>
+                        <tbody>
                         </tbody>
                     </table>
                 </div>
             </div>
         </div>
     </div>
-
-    <div class="row">
-        <div class="col-md-12">
-            <div class="box">
-                <div class="box-title">
-                    <h3><i class="fa fa-bar-chart-o"></i> Thống kê số lượng đơn hàng theo tháng</h3>
-                    <div class="box-tool">
-                        <a data-action="collapse" href="#"><i class="fa fa-chevron-up"></i></a>
-                        <a data-action="close" href="#"><i class="fa fa-times"></i></a>
-                    </div>
-                </div>
-                <div class="box-content">
-                    <div id="line_chart" style="width: 800px; height: 500px;"></div>
-                </div>
-            </div>
-        </div>
-    </div>
-
     <!-- END Main Content -->
 
     <footer>
@@ -94,30 +115,6 @@
 <!-- END Content -->
 <script>
     function search(date) {
-        var table = $('#table5');
-        ////$.post(
-        ////    '/Sale/GetSaleDate',
-        ////    {
-        ////        CommandAction: {
-        ////            SaleDate: date
-        ////        },
-        ////        dataType:'html',
-        ////    },
-        //    function(result) {
-        //        //var tbody = document.getElementById('table5').getElementsByTagName('tbody')[0];
-        //        //tbody.innerHTML = "";
-        //        //console.log(result);
-        //        //if (result.IsSuccess) {
-        //        //    $.each(result.Data, function (k, v) {
-        //        //        tbody.innerHTML += '<tr class="table-flag-blue"><td>' + v.SaleId + '</td><td>' + v.SaleDate + '</td><td>' + v.CustomerName + '</td><td>' + v.EmployeeName + '</td><td>' + v.Qty + '</td><td>' + Format(v.Total) + '</td><td>' + v.StatusShow + '</td></tr>';
-        //        //    });
-        //        //    console.log($('#tr0 #td0').html());
-        //        //}
-        //        //else {
-        //        //    noti(res.Message, 'error');
-        //        //}
-        //    }
-        //);
         $.ajax({
             url: "/Sale/GetSaleDate",
             type: "POST",
@@ -135,5 +132,61 @@
     function deletesale(id) {
         alert(this.value);
     }
-   
+    $(function(){
+        $('#box1').hide();
+        $('#box2').hide();
+        $('#error').hide();
+});
+    function StatisticalChanged(obj) {
+        var content = document.getElementById('contentt');
+        debugger;
+        if (obj.value === "") {
+            $('#box1').hide();
+            $('#box2').hide();
+            $('#error').show();
+        }
+        if (obj.value === 'saledate') {
+            $('#error').hide();
+            $('#box2').hide();
+            $('#box1').show();
+        }
+        if (obj.value === 'salestatus') {
+            $('#error').hide();
+            $('#box1').hide();
+            $('#box2').show();
+        }
+    }
+    function StatusChanged(obj) {
+        if (obj.value === 'complete') {
+            debugger;
+            $.ajax({
+            url: "/Sale/GetSaleByStatus",
+            type: "POST",
+            dataType: 'html',
+            data: {
+                CommandAction: {
+                    Status: 1
+                }
+            },
+            success: function (data) {
+                $('#saleliststatus').html(data);
+            }
+        });
+        }
+        if (obj.value === 'uncomplete') {
+            $.ajax({
+            url: "/Sale/GetSaleByStatus",
+            type: "POST",
+            dataType: 'html',
+            data: {
+                CommandAction: {
+                    Status: 0
+                }
+            },
+            success: function (data) {
+                $('#saleliststatus').html(data);
+            }
+        });
+        }
+    }
 </script>
