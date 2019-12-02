@@ -1,0 +1,43 @@
+﻿@model IEnumerable<Domain.Sale>
+<div style="display:inline-block">
+    <input id="date" type='date' class="form-control" />
+</div>
+<div style="display:inline-block">
+    <input type="button" onclick="search(document.getElementById('date').value)" value="Search" />
+</div>
+<table id="table5" class="table table-advance">
+    <thead>
+        <tr>
+            <th>Mã hoá đơn</th>
+            <th>Ngày hoá đơn</th>
+            <th>Khách hàng</th>
+            <th>Nhân viên bán hàng</th>
+            <th>Số lượng</th>
+            <th>Tổng tiền</th>
+            <th>Trạng thái</th>
+            <th>Hành Động</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach(var item in ViewBag.Sale)
+        {
+            <tr>
+                <td>@item.SaleId</td>
+                <td>@item.SaleDate</td>
+                <td>@item.CustomerName</td>
+                <td>@item.EmployeeName</td>
+                <td>@item.Qty</td>
+                <td>@item.Total</td>
+                <td>@item.StatusShow</td>
+                <td><a title="Xem" href="#" onclick="btnView(@item.SaleId);" type="button" class="btn btn-default btn-sm"><span class="fa fa-eye"></span></a></td>
+            </tr>
+        }
+    </tbody>
+</table>
+<script>
+    function btnView(id) {
+        this.openPopup({
+            url: '/Sale/SaleView?CommandAction.SaleId=' + id
+        });
+    }
+</script>
