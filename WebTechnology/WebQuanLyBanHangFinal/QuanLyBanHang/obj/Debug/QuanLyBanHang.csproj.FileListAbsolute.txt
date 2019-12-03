@@ -736,3 +736,5 @@ E:\Web\WebTechnology\WebQuanLyBanHangFinal\QuanLyBanHang\obj\Debug\QuanLyBanHang
 E:\Web\WebTechnology\WebQuanLyBanHangFinal\QuanLyBanHang\obj\Debug\QuanLyBanHang.csproj.CopyComplete
 E:\Web\WebTechnology\WebQuanLyBanHangFinal\QuanLyBanHang\obj\Debug\QuanLyBanHang.dll
 E:\Web\WebTechnology\WebQuanLyBanHangFinal\QuanLyBanHang\obj\Debug\QuanLyBanHang.pdb
+C:\Users\Hello\Desktop\Web\WebTechnology\WebQuanLyBanHangFinal\QuanLyBanHang\obj\Debug\QuanLyBanHang.csprojAssemblyReference.cache
+C:\Users\Hello\Desktop\Web\WebTechnology\WebQuanLyBanHangFinal\QuanLyBanHang\obj\Debug\QuanLyBanHang.pdb

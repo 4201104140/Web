@@ -42,3 +42,13 @@ E:\WebQuanLyBanHang\Login\obj\Debug\LoginRepository.csproj.CoreCompileInputs.cac
 E:\WebQuanLyBanHang\Login\obj\Debug\LoginRepository.csproj.CopyComplete
 E:\WebQuanLyBanHang\Login\obj\Debug\Login.dll
 E:\WebQuanLyBanHang\Login\obj\Debug\Login.pdb
+C:\Users\Hello\Desktop\Web\WebTechnology\WebQuanLyBanHangFinal\Login\bin\Debug\Login.dll
+C:\Users\Hello\Desktop\Web\WebTechnology\WebQuanLyBanHangFinal\Login\bin\Debug\Login.pdb
+C:\Users\Hello\Desktop\Web\WebTechnology\WebQuanLyBanHangFinal\Login\bin\Debug\ConnectDataBase.dll
+C:\Users\Hello\Desktop\Web\WebTechnology\WebQuanLyBanHangFinal\Login\bin\Debug\User.dll
+C:\Users\Hello\Desktop\Web\WebTechnology\WebQuanLyBanHangFinal\Login\bin\Debug\ConnectDataBase.pdb
+C:\Users\Hello\Desktop\Web\WebTechnology\WebQuanLyBanHangFinal\Login\bin\Debug\User.pdb
+C:\Users\Hello\Desktop\Web\WebTechnology\WebQuanLyBanHangFinal\Login\obj\Debug\LoginRepository.csprojAssemblyReference.cache
+C:\Users\Hello\Desktop\Web\WebTechnology\WebQuanLyBanHangFinal\Login\obj\Debug\LoginRepository.csproj.CopyComplete
+C:\Users\Hello\Desktop\Web\WebTechnology\WebQuanLyBanHangFinal\Login\obj\Debug\Login.dll
+C:\Users\Hello\Desktop\Web\WebTechnology\WebQuanLyBanHangFinal\Login\obj\Debug\Login.pdb

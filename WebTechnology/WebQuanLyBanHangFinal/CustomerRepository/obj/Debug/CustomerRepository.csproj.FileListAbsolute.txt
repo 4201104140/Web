@@ -42,3 +42,13 @@ E:\WebQuanLyBanHang\CustomerRepository\obj\Debug\CustomerRepository.csproj.CoreC
 E:\WebQuanLyBanHang\CustomerRepository\obj\Debug\CustomerRepository.csproj.CopyComplete
 E:\WebQuanLyBanHang\CustomerRepository\obj\Debug\CustomerRepository.dll
 E:\WebQuanLyBanHang\CustomerRepository\obj\Debug\CustomerRepository.pdb
+C:\Users\Hello\Desktop\Web\WebTechnology\WebQuanLyBanHangFinal\CustomerRepository\bin\Debug\CustomerRepository.dll
+C:\Users\Hello\Desktop\Web\WebTechnology\WebQuanLyBanHangFinal\CustomerRepository\bin\Debug\CustomerRepository.pdb
+C:\Users\Hello\Desktop\Web\WebTechnology\WebQuanLyBanHangFinal\CustomerRepository\bin\Debug\ConnectDataBase.dll
+C:\Users\Hello\Desktop\Web\WebTechnology\WebQuanLyBanHangFinal\CustomerRepository\bin\Debug\Customer.dll
+C:\Users\Hello\Desktop\Web\WebTechnology\WebQuanLyBanHangFinal\CustomerRepository\bin\Debug\ConnectDataBase.pdb
+C:\Users\Hello\Desktop\Web\WebTechnology\WebQuanLyBanHangFinal\CustomerRepository\bin\Debug\Customer.pdb
+C:\Users\Hello\Desktop\Web\WebTechnology\WebQuanLyBanHangFinal\CustomerRepository\obj\Debug\CustomerRepository.csprojAssemblyReference.cache
+C:\Users\Hello\Desktop\Web\WebTechnology\WebQuanLyBanHangFinal\CustomerRepository\obj\Debug\CustomerRepository.csproj.CopyComplete
+C:\Users\Hello\Desktop\Web\WebTechnology\WebQuanLyBanHangFinal\CustomerRepository\obj\Debug\CustomerRepository.dll
+C:\Users\Hello\Desktop\Web\WebTechnology\WebQuanLyBanHangFinal\CustomerRepository\obj\Debug\CustomerRepository.pdb

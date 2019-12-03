@@ -27,10 +27,11 @@ namespace Tai.Controllers
             }
         }
         [Route("paypal")]
-        public IActionResult CheckOut()
+        public IActionResult CheckOut(string Address, string Phone)
         {
+            HttpContext.Session.SetObject<string>("phone", Phone);
             if (Cart.Count == 0) return View("Fail");
-            var createOrderResponse = CreateOrderPayPal.CreateOrder(Cart).Result;
+            var createOrderResponse = CreateOrderPayPal.CreateOrder(Cart,Address).Result;
             var createOrderResult = createOrderResponse.Result<Order>();
 
             foreach (PayPalCheckoutSdk.Orders.LinkDescription link in createOrderResult.Links)
@@ -54,6 +55,9 @@ namespace Tai.Controllers
             AmountWithBreakdown authorixedAmount = authorizeOrderResult.PurchaseUnits[0].AmountWithBreakdown;
             var captureOrderResponse = CaptureOrderPayPal.CaptureOrder(authorizationId).Result;
             //captureOrderResult = captureOrderResponse.Result<Capture>();
+            var sendSms = new TwilioSms();
+            sendSms.Send(HttpContext.Session.GetObject<string>("phone"));
+            HttpContext.Session.Remove("Cart");
             return View();
         }
         [Route("thanh-toan-that-bai")]

@@ -50,3 +50,15 @@ E:\WebQuanLyBanHang\EmployeeExecuteSaveBusiness\obj\Debug\EmployeeBusiness.cspro
 E:\WebQuanLyBanHang\EmployeeExecuteSaveBusiness\obj\Debug\EmployeeBusiness.csproj.CopyComplete
 E:\WebQuanLyBanHang\EmployeeExecuteSaveBusiness\obj\Debug\EmployeeExecuteSaveBusiness.dll
 E:\WebQuanLyBanHang\EmployeeExecuteSaveBusiness\obj\Debug\EmployeeExecuteSaveBusiness.pdb
+C:\Users\Hello\Desktop\Web\WebTechnology\WebQuanLyBanHangFinal\EmployeeExecuteSaveBusiness\bin\Debug\EmployeeExecuteSaveBusiness.dll
+C:\Users\Hello\Desktop\Web\WebTechnology\WebQuanLyBanHangFinal\EmployeeExecuteSaveBusiness\bin\Debug\EmployeeExecuteSaveBusiness.pdb
+C:\Users\Hello\Desktop\Web\WebTechnology\WebQuanLyBanHangFinal\EmployeeExecuteSaveBusiness\bin\Debug\ConnectDataBase.dll
+C:\Users\Hello\Desktop\Web\WebTechnology\WebQuanLyBanHangFinal\EmployeeExecuteSaveBusiness\bin\Debug\Employee.dll
+C:\Users\Hello\Desktop\Web\WebTechnology\WebQuanLyBanHangFinal\EmployeeExecuteSaveBusiness\bin\Debug\EmployeeRepository.dll
+C:\Users\Hello\Desktop\Web\WebTechnology\WebQuanLyBanHangFinal\EmployeeExecuteSaveBusiness\bin\Debug\ConnectDataBase.pdb
+C:\Users\Hello\Desktop\Web\WebTechnology\WebQuanLyBanHangFinal\EmployeeExecuteSaveBusiness\bin\Debug\EmployeeRepository.pdb
+C:\Users\Hello\Desktop\Web\WebTechnology\WebQuanLyBanHangFinal\EmployeeExecuteSaveBusiness\bin\Debug\Employee.pdb
+C:\Users\Hello\Desktop\Web\WebTechnology\WebQuanLyBanHangFinal\EmployeeExecuteSaveBusiness\obj\Debug\EmployeeBusiness.csprojAssemblyReference.cache
+C:\Users\Hello\Desktop\Web\WebTechnology\WebQuanLyBanHangFinal\EmployeeExecuteSaveBusiness\obj\Debug\EmployeeBusiness.csproj.CopyComplete
+C:\Users\Hello\Desktop\Web\WebTechnology\WebQuanLyBanHangFinal\EmployeeExecuteSaveBusiness\obj\Debug\EmployeeExecuteSaveBusiness.dll
+C:\Users\Hello\Desktop\Web\WebTechnology\WebQuanLyBanHangFinal\EmployeeExecuteSaveBusiness\obj\Debug\EmployeeExecuteSaveBusiness.pdb
