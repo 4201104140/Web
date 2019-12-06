@@ -37,3 +37,15 @@ E:\Web\WebTechnology\WebQuanLyBanHangFinal\SaleBusiness\obj\Debug\SaleBusiness.c
 E:\Web\WebTechnology\WebQuanLyBanHangFinal\SaleBusiness\obj\Debug\SaleBusiness.csproj.CopyComplete
 E:\Web\WebTechnology\WebQuanLyBanHangFinal\SaleBusiness\obj\Debug\SaleBusiness.dll
 E:\Web\WebTechnology\WebQuanLyBanHangFinal\SaleBusiness\obj\Debug\SaleBusiness.pdb
+C:\Users\Hello\Desktop\Web\WebTechnology\WebQuanLyBanHangFinal\SaleBusiness\bin\Debug\SaleBusiness.dll
+C:\Users\Hello\Desktop\Web\WebTechnology\WebQuanLyBanHangFinal\SaleBusiness\bin\Debug\SaleBusiness.pdb
+C:\Users\Hello\Desktop\Web\WebTechnology\WebQuanLyBanHangFinal\SaleBusiness\bin\Debug\ConnectDataBase.dll
+C:\Users\Hello\Desktop\Web\WebTechnology\WebQuanLyBanHangFinal\SaleBusiness\bin\Debug\Sale.dll
+C:\Users\Hello\Desktop\Web\WebTechnology\WebQuanLyBanHangFinal\SaleBusiness\bin\Debug\SaleRepository.dll
+C:\Users\Hello\Desktop\Web\WebTechnology\WebQuanLyBanHangFinal\SaleBusiness\bin\Debug\ConnectDataBase.pdb
+C:\Users\Hello\Desktop\Web\WebTechnology\WebQuanLyBanHangFinal\SaleBusiness\bin\Debug\SaleRepository.pdb
+C:\Users\Hello\Desktop\Web\WebTechnology\WebQuanLyBanHangFinal\SaleBusiness\bin\Debug\Sale.pdb
+C:\Users\Hello\Desktop\Web\WebTechnology\WebQuanLyBanHangFinal\SaleBusiness\obj\Debug\SaleBusiness.csprojAssemblyReference.cache
+C:\Users\Hello\Desktop\Web\WebTechnology\WebQuanLyBanHangFinal\SaleBusiness\obj\Debug\SaleBusiness.csproj.CopyComplete
+C:\Users\Hello\Desktop\Web\WebTechnology\WebQuanLyBanHangFinal\SaleBusiness\obj\Debug\SaleBusiness.dll
+C:\Users\Hello\Desktop\Web\WebTechnology\WebQuanLyBanHangFinal\SaleBusiness\obj\Debug\SaleBusiness.pdb

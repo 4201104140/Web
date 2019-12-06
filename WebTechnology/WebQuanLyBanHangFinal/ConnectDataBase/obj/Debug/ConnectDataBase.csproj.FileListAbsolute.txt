@@ -41,3 +41,10 @@ E:\WebQuanLyBanHang\ConnectDataBase\obj\Debug\ConnectDataBase.csproj.CoreCompile
 E:\WebQuanLyBanHang\ConnectDataBase\obj\Debug\ConnectDataBase.csproj.CopyComplete
 E:\WebQuanLyBanHang\ConnectDataBase\obj\Debug\ConnectDataBase.dll
 E:\WebQuanLyBanHang\ConnectDataBase\obj\Debug\ConnectDataBase.pdb
+C:\Users\Hello\Desktop\Web\WebTechnology\WebQuanLyBanHangFinal\ConnectDataBase\bin\Debug\ConnectDataBase.dll
+C:\Users\Hello\Desktop\Web\WebTechnology\WebQuanLyBanHangFinal\ConnectDataBase\bin\Debug\ConnectDataBase.pdb
+C:\Users\Hello\Desktop\Web\WebTechnology\WebQuanLyBanHangFinal\ConnectDataBase\bin\Debug\Newtonsoft.Json.dll
+C:\Users\Hello\Desktop\Web\WebTechnology\WebQuanLyBanHangFinal\ConnectDataBase\obj\Debug\ConnectDataBase.csprojAssemblyReference.cache
+C:\Users\Hello\Desktop\Web\WebTechnology\WebQuanLyBanHangFinal\ConnectDataBase\obj\Debug\ConnectDataBase.csproj.CopyComplete
+C:\Users\Hello\Desktop\Web\WebTechnology\WebQuanLyBanHangFinal\ConnectDataBase\obj\Debug\ConnectDataBase.dll
+C:\Users\Hello\Desktop\Web\WebTechnology\WebQuanLyBanHangFinal\ConnectDataBase\obj\Debug\ConnectDataBase.pdb

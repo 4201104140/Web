@@ -34,3 +34,11 @@ E:\WebQuanLyBanHang\Employee\obj\Debug\Employee.csproj.CoreCompileInputs.cache
 E:\WebQuanLyBanHang\Employee\obj\Debug\Employee.csproj.CopyComplete
 E:\WebQuanLyBanHang\Employee\obj\Debug\Employee.dll
 E:\WebQuanLyBanHang\Employee\obj\Debug\Employee.pdb
+C:\Users\Hello\Desktop\Web\WebTechnology\WebQuanLyBanHangFinal\Employee\bin\Debug\Employee.dll
+C:\Users\Hello\Desktop\Web\WebTechnology\WebQuanLyBanHangFinal\Employee\bin\Debug\Employee.pdb
+C:\Users\Hello\Desktop\Web\WebTechnology\WebQuanLyBanHangFinal\Employee\bin\Debug\ConnectDataBase.dll
+C:\Users\Hello\Desktop\Web\WebTechnology\WebQuanLyBanHangFinal\Employee\bin\Debug\ConnectDataBase.pdb
+C:\Users\Hello\Desktop\Web\WebTechnology\WebQuanLyBanHangFinal\Employee\obj\Debug\Employee.csprojAssemblyReference.cache
+C:\Users\Hello\Desktop\Web\WebTechnology\WebQuanLyBanHangFinal\Employee\obj\Debug\Employee.csproj.CopyComplete
+C:\Users\Hello\Desktop\Web\WebTechnology\WebQuanLyBanHangFinal\Employee\obj\Debug\Employee.dll
+C:\Users\Hello\Desktop\Web\WebTechnology\WebQuanLyBanHangFinal\Employee\obj\Debug\Employee.pdb

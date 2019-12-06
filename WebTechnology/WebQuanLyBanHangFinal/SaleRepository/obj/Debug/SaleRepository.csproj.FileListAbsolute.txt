@@ -31,3 +31,13 @@ E:\Web\WebTechnology\WebQuanLyBanHangFinal\SaleRepository\obj\Debug\SaleReposito
 E:\Web\WebTechnology\WebQuanLyBanHangFinal\SaleRepository\obj\Debug\SaleRepository.csproj.CopyComplete
 E:\Web\WebTechnology\WebQuanLyBanHangFinal\SaleRepository\obj\Debug\SaleRepository.dll
 E:\Web\WebTechnology\WebQuanLyBanHangFinal\SaleRepository\obj\Debug\SaleRepository.pdb
+C:\Users\Hello\Desktop\Web\WebTechnology\WebQuanLyBanHangFinal\SaleRepository\bin\Debug\SaleRepository.dll
+C:\Users\Hello\Desktop\Web\WebTechnology\WebQuanLyBanHangFinal\SaleRepository\bin\Debug\SaleRepository.pdb
+C:\Users\Hello\Desktop\Web\WebTechnology\WebQuanLyBanHangFinal\SaleRepository\bin\Debug\ConnectDataBase.dll
+C:\Users\Hello\Desktop\Web\WebTechnology\WebQuanLyBanHangFinal\SaleRepository\bin\Debug\Sale.dll
+C:\Users\Hello\Desktop\Web\WebTechnology\WebQuanLyBanHangFinal\SaleRepository\bin\Debug\ConnectDataBase.pdb
+C:\Users\Hello\Desktop\Web\WebTechnology\WebQuanLyBanHangFinal\SaleRepository\bin\Debug\Sale.pdb
+C:\Users\Hello\Desktop\Web\WebTechnology\WebQuanLyBanHangFinal\SaleRepository\obj\Debug\SaleRepository.csprojAssemblyReference.cache
+C:\Users\Hello\Desktop\Web\WebTechnology\WebQuanLyBanHangFinal\SaleRepository\obj\Debug\SaleRepository.csproj.CopyComplete
+C:\Users\Hello\Desktop\Web\WebTechnology\WebQuanLyBanHangFinal\SaleRepository\obj\Debug\SaleRepository.dll
+C:\Users\Hello\Desktop\Web\WebTechnology\WebQuanLyBanHangFinal\SaleRepository\obj\Debug\SaleRepository.pdb

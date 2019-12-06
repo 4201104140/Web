@@ -60,12 +60,12 @@ namespace Tai.Controllers
             
             return RedirectToAction("Index", "Home");
         }
-
+        [Route("/gio-hang/thanh-toan")]
         public IActionResult CheckOut()
         {
             if (HttpContext.Session.GetObject<Customer>("user") == null)
             {
-                return RedirectToAction("SignIn", "Login", new { returnUrl = "/Cart/CheckOut" });
+                return RedirectToAction("SignIn", "Login", new { returnUrl = "/gio-hang/thanh-toan" });
             }
             return View();
         }

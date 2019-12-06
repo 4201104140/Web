@@ -10,7 +10,7 @@ namespace Tai.Models.CaptureIntent
 {
     public class CreateOrderPayPal
     {
-        private static OrderRequest BuildRequestBody(List<CartItem> carts)
+        private static OrderRequest BuildRequestBody(List<CartItem> carts,string Add,string host)
         {
             var sumPrice = carts.Sum(c => c.Price);
             List<Item> items = new List<Item>();
@@ -43,8 +43,8 @@ namespace Tai.Models.CaptureIntent
                 {
                     BrandName = "Nhom 13",
                     LandingPage = "BILLING",
-                    CancelUrl = "https://localhost:44389/thanh-toan/thanh-toan-that-bai",
-                    ReturnUrl = "https://localhost:44389/thanh-toan/thanh-toan-thanh-cong",
+                    CancelUrl = host+"/thanh-toan/thanh-toan-that-bai",
+                    ReturnUrl = host+"/thanh-toan/thanh-toan-thanh-cong",
                     UserAction = "CONTINUE",
                     ShippingPreference = "SET_PROVIDED_ADDRESS"
                 },
@@ -97,10 +97,10 @@ namespace Tai.Models.CaptureIntent
                             },
                             AddressPortable = new AddressPortable
                             {
-                                AddressLine1 = "123 Townsend St",
-                                AddressLine2 = "Floor 6",
-                                AdminArea2 = "San Francisco",
-                                AdminArea1 = "CA",
+                                AddressLine1 = Add,
+                                AddressLine2 = "",
+                                AdminArea2 = "HCM",
+                                AdminArea1 = "",
                                 PostalCode = "94107",
                                 CountryCode = "US"
                             }
@@ -113,11 +113,11 @@ namespace Tai.Models.CaptureIntent
         }
 
         //Below function can be used to create an order with complete payload.
-        public async static Task<HttpResponse> CreateOrder(List<CartItem> carts)
+        public async static Task<HttpResponse> CreateOrder(List<CartItem> carts, string Add,string host)
         {
             var request = new OrdersCreateRequest();
             request.Prefer("return=representation");
-            request.RequestBody(BuildRequestBody(carts));
+            request.RequestBody(BuildRequestBody(carts,Add,host));
             var response = await PayPalClient.client().Execute(request);
             var result = response.Result<Order>();
             
@@ -132,8 +132,8 @@ namespace Tai.Models.CaptureIntent
                 CheckoutPaymentIntent = "AUTHORIZE",
                 ApplicationContext = new ApplicationContext
                 {
-                    CancelUrl = "https://www.example.com",
-                    ReturnUrl = "https://www.example.com"
+                    CancelUrl = "http://shopnhom.azurewebsites.net/thanh-toan/thanh-toan-that-bai",
+                    ReturnUrl = "http://shopnhom.azurewebsites.net/thanh-toan/thanh-toan-thanh-cong"
                 },
                 PurchaseUnits = new List<PurchaseUnitRequest>
                 {

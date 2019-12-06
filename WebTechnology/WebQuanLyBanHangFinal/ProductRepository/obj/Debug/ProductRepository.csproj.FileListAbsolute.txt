@@ -31,3 +31,13 @@ E:\WebQuanLyBanHang\ProductRepository\obj\Debug\ProductRepository.csproj.CoreCom
 E:\WebQuanLyBanHang\ProductRepository\obj\Debug\ProductRepository.csproj.CopyComplete
 E:\WebQuanLyBanHang\ProductRepository\obj\Debug\ProductRepository.dll
 E:\WebQuanLyBanHang\ProductRepository\obj\Debug\ProductRepository.pdb
+C:\Users\Hello\Desktop\Web\WebTechnology\WebQuanLyBanHangFinal\ProductRepository\bin\Debug\ProductRepository.dll
+C:\Users\Hello\Desktop\Web\WebTechnology\WebQuanLyBanHangFinal\ProductRepository\bin\Debug\ProductRepository.pdb
+C:\Users\Hello\Desktop\Web\WebTechnology\WebQuanLyBanHangFinal\ProductRepository\bin\Debug\ConnectDataBase.dll
+C:\Users\Hello\Desktop\Web\WebTechnology\WebQuanLyBanHangFinal\ProductRepository\bin\Debug\Product.dll
+C:\Users\Hello\Desktop\Web\WebTechnology\WebQuanLyBanHangFinal\ProductRepository\bin\Debug\ConnectDataBase.pdb
+C:\Users\Hello\Desktop\Web\WebTechnology\WebQuanLyBanHangFinal\ProductRepository\bin\Debug\Product.pdb
+C:\Users\Hello\Desktop\Web\WebTechnology\WebQuanLyBanHangFinal\ProductRepository\obj\Debug\ProductRepository.csprojAssemblyReference.cache
+C:\Users\Hello\Desktop\Web\WebTechnology\WebQuanLyBanHangFinal\ProductRepository\obj\Debug\ProductRepository.csproj.CopyComplete
+C:\Users\Hello\Desktop\Web\WebTechnology\WebQuanLyBanHangFinal\ProductRepository\obj\Debug\ProductRepository.dll
+C:\Users\Hello\Desktop\Web\WebTechnology\WebQuanLyBanHangFinal\ProductRepository\obj\Debug\ProductRepository.pdb

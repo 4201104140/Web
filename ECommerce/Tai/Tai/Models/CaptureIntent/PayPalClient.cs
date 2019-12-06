@@ -16,7 +16,7 @@ namespace Tai.Models.CaptureIntent
         {
             return new SandboxEnvironment(
                  "AUnTZfpeo5Nznz6EkBmQahE28PECPtViHPYh57mVJyZQiPiyCXM-Aftuv1RX36elrm95tYIXG5_3o5aq",
-                 "EFwubsoY31UmXDHypzANrpXA3CUUFpR6vIzWCQuNM2oDcyhbZrFq_X5aFZVE5EPMLxe34US3ALQhGjXl");
+                 "ENOdndEZNayjVjKeXtj48RJHTOT0fXw5lcA_PHsLLlYuHqXzg-zZZOEQy2Rz0Gd7pwQhmHhK1zDtYdbw");
         }
 
         /**

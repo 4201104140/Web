@@ -22,3 +22,8 @@ E:\WebQuanLyBanHang\Sale\obj\Debug\Sale.csprojAssemblyReference.cache
 E:\WebQuanLyBanHang\Sale\obj\Debug\Sale.csproj.CoreCompileInputs.cache
 E:\WebQuanLyBanHang\Sale\obj\Debug\Sale.dll
 E:\WebQuanLyBanHang\Sale\obj\Debug\Sale.pdb
+C:\Users\Hello\Desktop\Web\WebTechnology\WebQuanLyBanHangFinal\Sale\bin\Debug\Sale.dll
+C:\Users\Hello\Desktop\Web\WebTechnology\WebQuanLyBanHangFinal\Sale\bin\Debug\Sale.pdb
+C:\Users\Hello\Desktop\Web\WebTechnology\WebQuanLyBanHangFinal\Sale\obj\Debug\Sale.csprojAssemblyReference.cache
+C:\Users\Hello\Desktop\Web\WebTechnology\WebQuanLyBanHangFinal\Sale\obj\Debug\Sale.dll
+C:\Users\Hello\Desktop\Web\WebTechnology\WebQuanLyBanHangFinal\Sale\obj\Debug\Sale.pdb

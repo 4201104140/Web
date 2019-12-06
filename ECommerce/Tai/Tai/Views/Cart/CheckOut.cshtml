@@ -39,12 +39,11 @@
                     <div class="row address-inputs">
                         <div class="col-md-12">
                             <input type="text" placeholder="Address" name="Address">
-                            <input type="text" placeholder="Country" name="Country">
-                            <input type="text" placeholder="Phone no.">
+                            <input type="text" placeholder="Phone no." name="Phone">
                         </div>
                     </div>
                     <ul class="payment-list">
-                        <li>Paypal<a href="#"><img src="~/divisima/img/paypal.png" alt=""></a></li>
+                        <li>Paypal<a href="#"><img src="~/divisima/img/paypal.png" alt="paypal"></a></li>
                     </ul>
                     <input type="submit" class="site-btn submit-order-btn" value="Đặt hàng"/>
                 </form>
@@ -53,20 +52,25 @@
                 <div class="checkout-cart">
                     <h3>Đơn hàng</h3>
                     <ul class="product-list">
-                        @foreach (var item in cartItems)
+                        @if (cartItems != null)
                         {
-                            <li>
-                                <div class="pl-thumb"><img src="~/Hinh/product/@item.Product.Images" alt=""></div>
-                                <h6>@item.Product.ProductName</h6>
-                                <p>@item.Price.ToVnC() x @item.Quantity</p>
-                            </li>
+                            @foreach (var item in cartItems)
+                            {
+
+                                <li>
+                                    <div class="pl-thumb"><img src="~/Hinh/product/@item.Product.Images" alt="@item.Product.ProductName"></div>
+                                    <h6>@item.Product.ProductName</h6>
+                                    <p>@item.Price.ToVnC() x @item.Quantity</p>
+                                </li>
+                            }
                         }
+
 
                     </ul>
                     <ul class="price-list">
                         <li>Shipping<span>free</span></li>
                         <li>Thuế VAT<span>10%</span></li>
-                        <li>Tổng giá<span>(@sumPrice)*1.1.ToVnC()</span></li>
+                        <li>Tổng giá<span>@((sumPrice*110/100).ToVnC())</span></li>
                     </ul>
                 </div>
             </div>

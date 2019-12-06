@@ -50,3 +50,15 @@ E:\WebQuanLyBanHang\CustomerBusiness\obj\Debug\CustomerBusiness.csproj.CoreCompi
 E:\WebQuanLyBanHang\CustomerBusiness\obj\Debug\CustomerBusiness.csproj.CopyComplete
 E:\WebQuanLyBanHang\CustomerBusiness\obj\Debug\CustomerBusiness.dll
 E:\WebQuanLyBanHang\CustomerBusiness\obj\Debug\CustomerBusiness.pdb
+C:\Users\Hello\Desktop\Web\WebTechnology\WebQuanLyBanHangFinal\CustomerBusiness\bin\Debug\CustomerBusiness.dll
+C:\Users\Hello\Desktop\Web\WebTechnology\WebQuanLyBanHangFinal\CustomerBusiness\bin\Debug\CustomerBusiness.pdb
+C:\Users\Hello\Desktop\Web\WebTechnology\WebQuanLyBanHangFinal\CustomerBusiness\bin\Debug\ConnectDataBase.dll
+C:\Users\Hello\Desktop\Web\WebTechnology\WebQuanLyBanHangFinal\CustomerBusiness\bin\Debug\Customer.dll
+C:\Users\Hello\Desktop\Web\WebTechnology\WebQuanLyBanHangFinal\CustomerBusiness\bin\Debug\CustomerRepository.dll
+C:\Users\Hello\Desktop\Web\WebTechnology\WebQuanLyBanHangFinal\CustomerBusiness\bin\Debug\ConnectDataBase.pdb
+C:\Users\Hello\Desktop\Web\WebTechnology\WebQuanLyBanHangFinal\CustomerBusiness\bin\Debug\CustomerRepository.pdb
+C:\Users\Hello\Desktop\Web\WebTechnology\WebQuanLyBanHangFinal\CustomerBusiness\bin\Debug\Customer.pdb
+C:\Users\Hello\Desktop\Web\WebTechnology\WebQuanLyBanHangFinal\CustomerBusiness\obj\Debug\CustomerBusiness.csprojAssemblyReference.cache
+C:\Users\Hello\Desktop\Web\WebTechnology\WebQuanLyBanHangFinal\CustomerBusiness\obj\Debug\CustomerBusiness.csproj.CopyComplete
+C:\Users\Hello\Desktop\Web\WebTechnology\WebQuanLyBanHangFinal\CustomerBusiness\obj\Debug\CustomerBusiness.dll
+C:\Users\Hello\Desktop\Web\WebTechnology\WebQuanLyBanHangFinal\CustomerBusiness\obj\Debug\CustomerBusiness.pdb
