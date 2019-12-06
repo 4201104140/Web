@@ -1,0 +1,33 @@
+﻿<div class="box">
+    <div class="box-title">
+        <h3><i class="fa fa-bar-chart-o"></i> Thống kê hoá đơn theo ngày</h3>
+        <div class="box-tool">
+            <a data-action="collapse" href="#"><i class="fa fa-chevron-up"></i></a>
+            <a data-action="close" href="#"><i class="fa fa-times"></i></a>
+        </div>
+    </div>
+    <div class="box-content" id="salelist">
+        <div style="display:inline-block">
+            <input id="date" type='date' class="form-control" />
+        </div>
+        <div style="display:inline-block">
+            <input type="button" onclick="search(document.getElementById('date').value)" value="Search" />
+        </div>
+        <table id="table5" class="table table-advance">
+            <thead>
+                <tr>
+                    <th>Mã hoá đơn</th>
+                    <th>Ngày hoá đơn</th>
+                    <th>Khách hàng</th>
+                    <th>Nhân viên bán hàng</th>
+                    <th>Số lượng</th>
+                    <th>Tổng tiền</th>
+                    <th>Trạng thái</th>
+                    <th>Hành Động</th>
+                </tr>
+            </thead>
+            <tbody id="salelist">
+            </tbody>
+        </table>
+    </div>
+</div>

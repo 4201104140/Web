@@ -1,0 +1,120 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+    <title>Excel Add-In with Commands Sample</title>
+    <script src="~/Scripts/jquery-1.10.2.min.js"></script>
+    <!-- To enable offline debugging using a local reference to Office.js, use:  -->
+    <!-- <script src="Scripts/Office/MicrosoftAjax.js" type="text/javascript"></script>  -->
+    <!-- <script src="Scripts/Office/1/office.js" type="text/javascript"></script>  -->
+    <script src="https://appsforoffice.microsoft.com/lib/1/hosted/office.js" type="text/javascript"></script>
+    <link href="~/UI/semantic.min.css" rel="stylesheet" />
+    <script src="~/Scripts/bootstrap.min.js"></script>
+
+    <script src="~/UI/semantic.min.js"></script>
+    <link href="~/Content/excel.css" rel="stylesheet" />
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <link rel="stylesheet" href="/resources/demos/style.css">
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
+    <script>
+
+        $(function () {
+
+            $("#datepicker").datepicker();
+
+        });
+
+    </script>
+
+
+</head>
+<body>
+    <div class="ui equal width form">
+        <div class="fields">
+            <div class="field">
+                <label>Thống kê</label>
+                <select id="sl" class="ui search dropdown" onchange="StatisticalChanged(this)">
+                    <option value="">Chọn</option>
+                    <option value="date">Theo ngày</option>
+                    <option value="status">Theo trạng thái</option>
+                </select>
+            </div>
+            <div class="field" id="error">
+                <label class="label-danger text-danger">Bạn chưa chọn loại thống kê</label>
+            </div>
+        </div>
+        <div class="fields" id="date">
+            <div class="field">
+                <label>Chọn ngày</label>
+                <p>Date: <input type="text" id="datepicker"></p>
+            </div>
+        </div>
+        <div class="fields" id="status">
+            <div class="field">
+                <label>Trạng thái</label>
+                <select class="ui search dropdown" id="sta">
+                    <option value="">Chọn</option>
+                    <option value="1">Đã hoàn thành</option>
+                    <option value="0">Chưa hoàn thành</option>
+                </select>
+            </div>
+        </div>
+        <div class="fields middle" id="btn">
+            <div class="field">
+                <div class="center menu">
+                    <button class="ui olive button" id="exportExcel">Xuất</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <script>
+        $(function () {
+            $('#date').hide();
+            $('#status').hide();
+            $('#error').hide();
+        });
+        function StatisticalChanged(obj) {
+            debugger;
+            if (obj.value === "") {
+                $('#date').hide();
+                $('#status').hide();
+                $('#error').show();
+            }
+            if (obj.value === 'date') {
+                $('#error').hide();
+                $('#status').hide();
+                $('#date').show();
+            }
+            if (obj.value === 'status') {
+                $('#error').hide();
+                $('#date').hide();
+                $('#status').show();
+            }
+        }
+        
+        
+    </script>
+
+
+    <script src="~/Scripts/getdata.js">IDBCursor</script>
+
+    <script src="~/Scripts/excel.js"></script>
+    
+    
+
+</body>
+</html>

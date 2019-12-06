@@ -1,0 +1,2 @@
+bin\Debug\OfficeAppManifests\DoAnNhom1Manifest.xml
+E:\WebQuanLyBanHangFinal\DoAnNhom1\bin\Debug\DoAnNhom1.debugapp

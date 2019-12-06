@@ -1,0 +1,4 @@
+E:\WebQuanLyBanHangFinal\DoAnNhom1\bin\Debug\DoAnNhom1.dll.config
+E:\WebQuanLyBanHangFinal\DoAnNhom1\obj\Debug\DoAnNhom1.csprojAssemblyReference.cache
+E:\WebQuanLyBanHangFinal\DoAnNhom1\obj\Debug\DoAnNhom1.csproj.CoreCompileInputs.cache
+E:\WebQuanLyBanHangFinal\DoAnNhom1\bin\Debug\ApplicationInsights.config
