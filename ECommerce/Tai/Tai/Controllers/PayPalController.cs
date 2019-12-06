@@ -29,9 +29,10 @@ namespace Tai.Controllers
         [Route("paypal")]
         public IActionResult CheckOut(string Address, string Phone)
         {
+            var host = HttpContext.Request.Scheme +"://"+ HttpContext.Request.Host;
             HttpContext.Session.SetObject<string>("phone", Phone);
             if (Cart.Count == 0) return View("Fail");
-            var createOrderResponse = CreateOrderPayPal.CreateOrder(Cart,Address).Result;
+            var createOrderResponse = CreateOrderPayPal.CreateOrder(Cart,Address,host).Result;
             var createOrderResult = createOrderResponse.Result<Order>();
 
             foreach (PayPalCheckoutSdk.Orders.LinkDescription link in createOrderResult.Links)

@@ -116,3 +116,4 @@ C:\Users\Hello\Desktop\Web\ECommerce\Tai\Tai\obj\Debug\netcoreapp2.2\Razor\Views
 C:\Users\Hello\Desktop\Web\ECommerce\Tai\Tai\obj\Debug\netcoreapp2.2\Razor\Views\Cart\CheckOut.cshtml.g.cs
 C:\Users\Hello\Desktop\Web\ECommerce\Tai\Tai\obj\Debug\netcoreapp2.2\Razor\Views\Login\SignIn.cshtml.g.cs
 C:\Users\Hello\Desktop\Web\ECommerce\Tai\Tai\obj\Debug\netcoreapp2.2\Razor\Views\Shared\_GoogleAnalytics.cshtml.g.cs
+C:\Users\Hello\Desktop\Web\ECommerce\Tai\Tai\obj\Debug\netcoreapp2.2\Tai.csprojAssemblyReference.cache

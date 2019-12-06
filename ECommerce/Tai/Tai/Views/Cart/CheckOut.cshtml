@@ -43,7 +43,7 @@
                         </div>
                     </div>
                     <ul class="payment-list">
-                        <li>Paypal<a href="#"><img src="~/divisima/img/paypal.png" alt=""></a></li>
+                        <li>Paypal<a href="#"><img src="~/divisima/img/paypal.png" alt="paypal"></a></li>
                     </ul>
                     <input type="submit" class="site-btn submit-order-btn" value="Đặt hàng"/>
                 </form>
@@ -52,14 +52,19 @@
                 <div class="checkout-cart">
                     <h3>Đơn hàng</h3>
                     <ul class="product-list">
-                        @foreach (var item in cartItems)
+                        @if (cartItems != null)
                         {
-                            <li>
-                                <div class="pl-thumb"><img src="~/Hinh/product/@item.Product.Images" alt=""></div>
-                                <h6>@item.Product.ProductName</h6>
-                                <p>@item.Price.ToVnC() x @item.Quantity</p>
-                            </li>
+                            @foreach (var item in cartItems)
+                            {
+
+                                <li>
+                                    <div class="pl-thumb"><img src="~/Hinh/product/@item.Product.Images" alt="@item.Product.ProductName"></div>
+                                    <h6>@item.Product.ProductName</h6>
+                                    <p>@item.Price.ToVnC() x @item.Quantity</p>
+                                </li>
+                            }
                         }
+
 
                     </ul>
                     <ul class="price-list">
